@@ -78,14 +78,19 @@ class TemplateCustomizer {
     if (!window.Helpers) throw new Error('window.Helpers required.')
     this.settings = {}
     this.settings.displayCustomizer = typeof displayCustomizer !== 'undefined' ? displayCustomizer : DISPLAY_CUSTOMIZER
-    this.settings.lang = lang || 'en'
-    if (defaultPrimaryColor) {
-      this.settings.defaultPrimaryColor = defaultPrimaryColor
-      primaryColorFlag = true
-    } else {
-      this.settings.defaultPrimaryColor = rootStyles.getPropertyValue('--bs-primary').trim()
-      primaryColorFlag = false
-    }
+    
+    // this.settings.lang = lang || 'en'
+    // if (defaultPrimaryColor) {
+    //   this.settings.defaultPrimaryColor = defaultPrimaryColor
+    //   primaryColorFlag = true
+    // } else {
+    //   this.settings.defaultPrimaryColor = rootStyles.getPropertyValue('--bs-primary').trim()
+    //   primaryColorFlag = false
+    // }
+    this.settings.lang = 'en'
+    this.settings.defaultPrimaryColor = 'info'
+    primaryColorFlag = true
+
     this.settings.defaultTheme = defaultTheme || DEFAULT_THEME
     this.settings.defaultSemiDark = typeof defaultSemiDark !== 'undefined' ? defaultSemiDark : false
     this.settings.defaultContentLayout =

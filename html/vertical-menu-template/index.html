@@ -1,324 +1,310 @@
 <!doctype html>
 
-<html
-  lang="en"
-  class="layout-navbar-fixed layout-menu-fixed layout-compact"
-  dir="ltr"
-  data-skin="default"
-  data-assets-path="../../assets/"
-  data-template="vertical-menu-template-starter"
-  data-bs-theme="light">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+<html lang="en" class="layout-navbar-fixed layout-menu-fixed layout-compact" dir="ltr" data-skin="default"
+  data-assets-path="../../assets/" data-template="vertical-menu-template-starter" data-bs-theme="light">
 
-    <title>Demo: Page 1 - Starter Kit | Sneat - Bootstrap Dashboard PRO</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <meta name="description" content="" />
+  <title>exOMS Sample Website</title>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../../assets/img/favicon/favicon.ico" />
+  <meta name="description" content="" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../../assets/img/favicon/favicon.ico" />
 
-    <link rel="stylesheet" href="../../assets/vendor/fonts/iconify-icons.css" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet" />
 
-    <!-- Core CSS -->
-    <!-- build:css assets/vendor/css/theme.css  -->
+  <link rel="stylesheet" href="../../assets/vendor/fonts/iconify-icons.css" />
 
-    <link rel="stylesheet" href="../../assets/vendor/libs/pickr/pickr-themes.css" />
+  <!-- Core CSS -->
+  <!-- build:css assets/vendor/css/theme.css  -->
 
-    <link rel="stylesheet" href="../../assets/vendor/css/core.css" />
-    <link rel="stylesheet" href="../../assets/css/demo.css" />
+  <link rel="stylesheet" href="../../assets/vendor/libs/pickr/pickr-themes.css" />
 
-    <!-- Vendors CSS -->
+  <link rel="stylesheet" href="../../assets/vendor/css/core.css" />
+  <link rel="stylesheet" href="../../assets/css/demo.css" />
 
-    <link rel="stylesheet" href="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+  <!-- Vendors CSS -->
 
-    <!-- endbuild -->
+  <link rel="stylesheet" href="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
 
-    <!-- Page CSS -->
+  <!-- endbuild -->
+  <link rel="stylesheet" href="../../assets/vendor/libs/apex-charts/apex-charts.css" />
+  <link rel="stylesheet" href="../../assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
+  <link rel="stylesheet" href="../../assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
 
-    <!-- Helpers -->
-    <script src="../../assets/vendor/js/helpers.js"></script>
-    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+  <!-- Page CSS -->
+    <link rel="stylesheet" href="../../assets/vendor/css/pages/app-logistics-dashboard.css" />
+  <!-- Helpers -->
+  <script src="../../assets/vendor/js/helpers.js"></script>
+  <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
 
-    <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
-    <script src="../../assets/vendor/js/template-customizer.js"></script>
+  <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
+  <!-- <script src="../../assets/vendor/js/template-customizer.js"></script> -->
 
-    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+  <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
 
-    <script src="../../assets/js/config.js"></script>
-  </head>
+  <script src="../../assets/js/config.js"></script>
+</head>
 
-  <body>
-    <!-- Layout wrapper -->
-    <div class="layout-wrapper layout-content-navbar">
-      <div class="layout-container">
-        <!-- Menu -->
+<body>
+  <!-- Layout wrapper -->
+  <div class="layout-wrapper layout-content-navbar">
+    <div class="layout-container">
+      <!-- Menu -->
 
-        <aside id="layout-menu" class="layout-menu menu-vertical menu">
-          <div class="app-brand demo">
-            <a href="index.html" class="app-brand-link">
-              <span class="app-brand-logo demo">
-                <span class="text-primary">
-                  <svg
-                    width="25"
-                    viewBox="0 0 25 42"
-                    version="1.1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <defs>
-                      <path
-                        d="M13.7918663,0.358365126 L3.39788168,7.44174259 C0.566865006,9.69408886 -0.379795268,12.4788597 0.557900856,15.7960551 C0.68998853,16.2305145 1.09562888,17.7872135 3.12357076,19.2293357 C3.8146334,19.7207684 5.32369333,20.3834223 7.65075054,21.2172976 L7.59773219,21.2525164 L2.63468769,24.5493413 C0.445452254,26.3002124 0.0884951797,28.5083815 1.56381646,31.1738486 C2.83770406,32.8170431 5.20850219,33.2640127 7.09180128,32.5391577 C8.347334,32.0559211 11.4559176,30.0011079 16.4175519,26.3747182 C18.0338572,24.4997857 18.6973423,22.4544883 18.4080071,20.2388261 C17.963753,17.5346866 16.1776345,15.5799961 13.0496516,14.3747546 L10.9194936,13.4715819 L18.6192054,7.984237 L13.7918663,0.358365126 Z"
-                        id="path-1"></path>
-                      <path
-                        d="M5.47320593,6.00457225 C4.05321814,8.216144 4.36334763,10.0722806 6.40359441,11.5729822 C8.61520715,12.571656 10.0999176,13.2171421 10.8577257,13.5094407 L15.5088241,14.433041 L18.6192054,7.984237 C15.5364148,3.11535317 13.9273018,0.573395879 13.7918663,0.358365126 C13.5790555,0.511491653 10.8061687,2.3935607 5.47320593,6.00457225 Z"
-                        id="path-3"></path>
-                      <path
-                        d="M7.50063644,21.2294429 L12.3234468,23.3159332 C14.1688022,24.7579751 14.397098,26.4880487 13.008334,28.506154 C11.6195701,30.5242593 10.3099883,31.790241 9.07958868,32.3040991 C5.78142938,33.4346997 4.13234973,34 4.13234973,34 C4.13234973,34 2.75489982,33.0538207 2.37032616e-14,31.1614621 C-0.55822714,27.8186216 -0.55822714,26.0572515 -4.05231404e-15,25.8773518 C0.83734071,25.6075023 2.77988457,22.8248993 3.3049379,22.52991 C3.65497346,22.3332504 5.05353963,21.8997614 7.50063644,21.2294429 Z"
-                        id="path-4"></path>
-                      <path
-                        d="M20.6,7.13333333 L25.6,13.8 C26.2627417,14.6836556 26.0836556,15.9372583 25.2,16.6 C24.8538077,16.8596443 24.4327404,17 24,17 L14,17 C12.8954305,17 12,16.1045695 12,15 C12,14.5672596 12.1403557,14.1461923 12.4,13.8 L10,7.13333333 C18.0627417,6.24967773 19.3163444,6.07059163 20.2,6.73333333 C20.3516113,6.84704183 20.4862915,6.981722 20.6,7.13333333 Z"
-                        id="path-5"></path>
-                    </defs>
-                    <g id="g-app-brand" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                      <g id="Brand-Logo" transform="translate(-27.000000, -15.000000)">
-                        <g id="Icon" transform="translate(27.000000, 15.000000)">
-                          <g id="Mask" transform="translate(0.000000, 8.000000)">
-                            <mask id="mask-2" fill="white">
-                              <use xlink:href="#path-1"></use>
-                            </mask>
-                            <use fill="currentColor" xlink:href="#path-1"></use>
-                            <g id="Path-3" mask="url(#mask-2)">
-                              <use fill="currentColor" xlink:href="#path-3"></use>
-                              <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-3"></use>
-                            </g>
-                            <g id="Path-4" mask="url(#mask-2)">
-                              <use fill="currentColor" xlink:href="#path-4"></use>
-                              <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-4"></use>
-                            </g>
+      <aside id="layout-menu" class="layout-menu menu-vertical menu">
+        <div class="app-brand demo">
+          <a href="index.html" class="app-brand-link">
+            <span class="app-brand-logo demo">
+              <span class="text-primary">
+                <svg width="25" viewBox="0 0 25 42" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs>
+                    <path
+                      d="M13.7918663,0.358365126 L3.39788168,7.44174259 C0.566865006,9.69408886 -0.379795268,12.4788597 0.557900856,15.7960551 C0.68998853,16.2305145 1.09562888,17.7872135 3.12357076,19.2293357 C3.8146334,19.7207684 5.32369333,20.3834223 7.65075054,21.2172976 L7.59773219,21.2525164 L2.63468769,24.5493413 C0.445452254,26.3002124 0.0884951797,28.5083815 1.56381646,31.1738486 C2.83770406,32.8170431 5.20850219,33.2640127 7.09180128,32.5391577 C8.347334,32.0559211 11.4559176,30.0011079 16.4175519,26.3747182 C18.0338572,24.4997857 18.6973423,22.4544883 18.4080071,20.2388261 C17.963753,17.5346866 16.1776345,15.5799961 13.0496516,14.3747546 L10.9194936,13.4715819 L18.6192054,7.984237 L13.7918663,0.358365126 Z"
+                      id="path-1"></path>
+                    <path
+                      d="M5.47320593,6.00457225 C4.05321814,8.216144 4.36334763,10.0722806 6.40359441,11.5729822 C8.61520715,12.571656 10.0999176,13.2171421 10.8577257,13.5094407 L15.5088241,14.433041 L18.6192054,7.984237 C15.5364148,3.11535317 13.9273018,0.573395879 13.7918663,0.358365126 C13.5790555,0.511491653 10.8061687,2.3935607 5.47320593,6.00457225 Z"
+                      id="path-3"></path>
+                    <path
+                      d="M7.50063644,21.2294429 L12.3234468,23.3159332 C14.1688022,24.7579751 14.397098,26.4880487 13.008334,28.506154 C11.6195701,30.5242593 10.3099883,31.790241 9.07958868,32.3040991 C5.78142938,33.4346997 4.13234973,34 4.13234973,34 C4.13234973,34 2.75489982,33.0538207 2.37032616e-14,31.1614621 C-0.55822714,27.8186216 -0.55822714,26.0572515 -4.05231404e-15,25.8773518 C0.83734071,25.6075023 2.77988457,22.8248993 3.3049379,22.52991 C3.65497346,22.3332504 5.05353963,21.8997614 7.50063644,21.2294429 Z"
+                      id="path-4"></path>
+                    <path
+                      d="M20.6,7.13333333 L25.6,13.8 C26.2627417,14.6836556 26.0836556,15.9372583 25.2,16.6 C24.8538077,16.8596443 24.4327404,17 24,17 L14,17 C12.8954305,17 12,16.1045695 12,15 C12,14.5672596 12.1403557,14.1461923 12.4,13.8 L10,7.13333333 C18.0627417,6.24967773 19.3163444,6.07059163 20.2,6.73333333 C20.3516113,6.84704183 20.4862915,6.981722 20.6,7.13333333 Z"
+                      id="path-5"></path>
+                  </defs>
+                  <g id="g-app-brand" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Brand-Logo" transform="translate(-27.000000, -15.000000)">
+                      <g id="Icon" transform="translate(27.000000, 15.000000)">
+                        <g id="Mask" transform="translate(0.000000, 8.000000)">
+                          <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                          </mask>
+                          <use fill="currentColor" xlink:href="#path-1"></use>
+                          <g id="Path-3" mask="url(#mask-2)">
+                            <use fill="currentColor" xlink:href="#path-3"></use>
+                            <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-3"></use>
                           </g>
-                          <g
-                            id="Triangle"
-                            transform="translate(19.000000, 11.000000) rotate(-300.000000) translate(-19.000000, -11.000000) ">
-                            <use fill="currentColor" xlink:href="#path-5"></use>
-                            <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-5"></use>
+                          <g id="Path-4" mask="url(#mask-2)">
+                            <use fill="currentColor" xlink:href="#path-4"></use>
+                            <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-4"></use>
                           </g>
+                        </g>
+                        <g id="Triangle"
+                          transform="translate(19.000000, 11.000000) rotate(-300.000000) translate(-19.000000, -11.000000) ">
+                          <use fill="currentColor" xlink:href="#path-5"></use>
+                          <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-5"></use>
                         </g>
                       </g>
                     </g>
-                  </svg>
-                </span>
+                  </g>
+                </svg>
               </span>
-              <span class="app-brand-text demo menu-text fw-bold ms-2">exOMS</span>
-            </a>
+            </span>
+            <span class="app-brand-text demo menu-text fw-bold ms-2">exOMS</span>
+          </a>
 
-            <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
-              <i class="icon-base bx bx-chevron-left"></i>
+          <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
+            <i class="icon-base bx bx-chevron-left"></i>
+          </a>
+        </div>
+
+        <div class="menu-inner-shadow"></div>
+
+        <ul class="menu-inner py-1">
+          <!-- Dashboards -->
+          <!-- <li class="menu-header small text-uppercase">
+              <span class="menu-header-text">Apps &amp; Pages</span>
+            </li> -->
+          <li class="menu-item active ">
+            <a href="javascript:void(0);" class="menu-link ">
+              <i class="menu-icon tf-icons bx bx-home-smile"></i>
+              <div class="text-truncate" >HOME</div>
+              <!-- <span class="badge rounded-pill bg-danger ms-auto">5</span> -->
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bx bx-cube-alt"></i>
+              <div class="text-truncate" >센터관리</div>
+            </a>
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="pages-misc-error.html" class="menu-link">
+                  <label class="list-group-item w-100">
+                    <div class="text-truncate w-100" >센터관리
+                      <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
+                    </div>
+                  </label>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- Pages -->
+          <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bx bx-dock-top"></i>
+              <div class="text-truncate">배송접수</div>
+            </a>
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="pages-account-settings-account.html" class="menu-link">
+                  <label class="list-group-item w-100">
+                    <div class="text-truncate" >배송등록
+                      <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
+                    </div>
+                  </label>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="pages-account-settings-notifications.html" class="menu-link">
+                  <label class="list-group-item w-100">
+                    <div class="text-truncate" >패킹리스트
+                      <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
+                    </div>
+                  </label>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bx bx-layout"></i>
+              <div class="text-truncate" >발송내역</div>
+            </a>
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="auth-login-basic.html" class="menu-link" target="_blank">
+                  <label class="list-group-item w-100">
+                    <div class="text-truncate" >발송내역
+                      <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
+                    </div>
+                  </label>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bx bx-cube-alt"></i>
+              <div class="text-truncate" >상품관리</div>
+            </a>
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="pages-misc-error.html" class="menu-link">
+                  <label class="list-group-item w-100">
+                    <div class="text-truncate" >상품관리
+                      <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
+                    </div>
+                  </label>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="pages-misc-error.html" class="menu-link">
+                  <div class="text-truncate" >
+
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bx bx-grid"></i>
+              <div class="text-truncate" >MyPage</div>
+            </a>
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="pages-misc-error.html" class="menu-link">
+                  <label class="list-group-item w-100">
+                    <div class="text-truncate" >MyPage
+                      <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
+                    </div>
+                  </label>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </aside>
+
+      <div class="menu-mobile-toggler d-xl-none rounded-1">
+        <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large text-bg-secondary p-2 rounded-1">
+          <i class="bx bx-menu icon-base"></i>
+          <i class="bx bx-chevron-right icon-base"></i>
+        </a>
+      </div>
+      <!-- / Menu -->
+
+      <!-- Layout container -->
+      <div class="layout-page">
+        <!-- Navbar -->
+
+        <nav
+          class="layout-navbar container-fluid navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+          id="layout-navbar">
+          <div class="layout-menu-toggle navbar-nav align-items-xl-center me-4 me-xl-0 d-xl-none">
+            <a class="nav-item nav-link px-0 me-xl-6" href="javascript:void(0)">
+              <i class="bx bx-menu bx-md"></i>
             </a>
           </div>
 
-          <div class="menu-inner-shadow"></div>
-
-          <ul class="menu-inner py-1">
-            <!-- Dashboards -->           
-             <!-- <li class="menu-header small text-uppercase">
-              <span class="menu-header-text">Apps &amp; Pages</span>
-            </li> -->
-            <li class="menu-item active ">
-              <a href="javascript:void(0);" class="menu-link ">
-                <i class="menu-icon tf-icons bx bx-home-smile"></i>
-                <div class="text-truncate" data-i18n="Dashboards">HOME</div>
-                <!-- <span class="badge rounded-pill bg-danger ms-auto">5</span> -->
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-cube-alt"></i>
-                <div class="text-truncate" data-i18n="Misc">센터관리</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="pages-misc-error.html" class="menu-link">
-                    <label class="list-group-item w-100">
-                      <div class="text-truncate w-100" data-i18n="Error">센터관리
-                          <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
-                      </div>
-                    </label>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <!-- Pages -->
-            <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-dock-top"></i>
-                <div class="text-truncate" data-i18n="Account Settings">배송접수</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="pages-account-settings-account.html" class="menu-link">
-                    <label class="list-group-item w-100">
-                      <div class="text-truncate" data-i18n="Account">배송등록
-                          <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
-                      </div>
-                    </label>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="pages-account-settings-notifications.html" class="menu-link">
-                    <label class="list-group-item w-100">
-                      <div class="text-truncate" data-i18n="Notifications">패킹리스트
-                          <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
-                      </div>
-                    </label>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-layout"></i>
-                <div class="text-truncate" data-i18n="Authentications">발송내역</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="auth-login-basic.html" class="menu-link" target="_blank">
-                    <label class="list-group-item w-100">
-                      <div class="text-truncate" data-i18n="Basic">발송내역
-                          <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
-                      </div>
-                    </label>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-cube-alt"></i>
-                <div class="text-truncate" data-i18n="Misc">상품관리</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="pages-misc-error.html" class="menu-link">
-                    <label class="list-group-item w-100">
-                      <div class="text-truncate" data-i18n="Error">상품관리
-                          <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
-                      </div>
-                    </label>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item">
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="pages-misc-error.html" class="menu-link">
-                    <div class="text-truncate" data-i18n="Error">
-                      
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-grid"></i>
-                <div class="text-truncate" data-i18n="Misc">MyPage</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="pages-misc-error.html" class="menu-link">
-                    <label class="list-group-item w-100">
-                      <div class="text-truncate" data-i18n="Error">MyPage
-                          <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
-                      </div>
-                    </label>
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </aside>
-
-        <div class="menu-mobile-toggler d-xl-none rounded-1">
-          <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large text-bg-secondary p-2 rounded-1">
-            <i class="bx bx-menu icon-base"></i>
-            <i class="bx bx-chevron-right icon-base"></i>
-          </a>
-        </div>
-        <!-- / Menu -->
-
-        <!-- Layout container -->
-        <div class="layout-page">
-          <!-- Navbar -->
-
-          <nav
-            class="layout-navbar container-fluid navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
-            id="layout-navbar">
-            <div class="layout-menu-toggle navbar-nav align-items-xl-center me-4 me-xl-0 d-xl-none">
-              <a class="nav-item nav-link px-0 me-xl-6" href="javascript:void(0)">
-                <i class="bx bx-menu bx-md"></i>
-              </a>
-            </div>
-
-            <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-              <!-- Search -->
-              <div class="navbar-nav align-items-center">
-                <div class="nav-item d-flex align-items-center">
-                  <i class="bx bx-search bx-md"></i>
-                  <input
-                    type="text"
-                    class="form-control border-0 shadow-none ps-1 ps-sm-2"
-                    placeholder="화물 검색"
-                    aria-label="화물 검색" />
-                </div>
+          <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+            <!-- Search -->
+            <div class="navbar-nav align-items-center">
+              <div class="nav-item d-flex align-items-center">
+                <i class="bx bx-search bx-md"></i>
+                <input type="text" class="form-control border-0 shadow-none ps-1 ps-sm-2" placeholder="검색어를 입력해주세요"
+                  aria-label="검색어를 입력해주세요" />
               </div>
-              <!-- /Search -->
+            </div>
+            <!-- /Search -->
 
-              <ul class="navbar-nav flex-row align-items-center ms-auto">
-                <!-- Place this tag where you want the button to render. -->
-                <!-- User -->
-                <li class="nav-item navbar-dropdown dropdown-user dropdown">
-                  <a
-                    class="nav-link dropdown-toggle hide-arrow p-0"
-                    href="javascript:void(0);"
-                    data-bs-toggle="dropdown">
-                    홍길동(TS14215)
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-end">
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        <div class="d-flex">
-                          <div class="flex-shrink-0 me-3">
-                          </div>
-                          <div class="flex-grow-1">
-                            <h6 class="mb-0">홍길동</h6>
-                            <small class="text-muted">TS14215</small>
-                          </div>
+            <ul class="navbar-nav flex-row align-items-center ms-auto">
+              <!-- Place this tag where you want the button to render. -->
+              <!-- User -->
+              <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                <a class="nav-link dropdown-toggle hide-arrow p-0" href="javascript:void(0);" data-bs-toggle="dropdown">
+                  홍길동(TS14215)
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <div class="d-flex">
+                        <div class="flex-shrink-0 me-3">
                         </div>
-                      </a>
-                    </li>
-                    <li>
-                      <div class="dropdown-divider my-1"></div>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        <i class="bx bx-user bx-md me-3"></i><span>내 프로필</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"> <i class="bx bx-cog bx-md me-3"></i><span>설정</span> </a>
-                    </li>
-                    <!-- <li>
+                        <div class="flex-grow-1">
+                          <h6 class="mb-0">홍길동</h6>
+                          <small class="text-muted">TS14215</small>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <div class="dropdown-divider my-1"></div>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <i class="bx bx-user bx-md me-3"></i><span>내 프로필</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"> <i class="bx bx-cog bx-md me-3"></i><span>설정</span> </a>
+                  </li>
+                  <!-- <li>
                       <a class="dropdown-item" href="#">
                         <span class="d-flex align-items-center align-middle">
                           <i class="flex-shrink-0 bx bx-credit-card bx-md me-3"></i
@@ -327,335 +313,293 @@
                         </span>
                       </a>
                     </li> -->
-                    <li>
-                      <div class="dropdown-divider my-1"></div>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="javascript:void(0);">
-                        <i class="bx bx-power-off bx-md me-3"></i><span>로그아웃</span>
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <span style="margin-left: 1rem;color: gray;">|</span>
-                <li class="nav-item">
-                  <a href="javascript:void(0)" class="btn btn-sm">
-                    <i class="bx bx-log-out-circle me-1"></i>로그아웃
-                  </a>
-                </li>
-              </ul>
+                  <li>
+                    <div class="dropdown-divider my-1"></div>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="javascript:void(0);">
+                      <i class="bx bx-power-off bx-md me-3"></i><span>로그아웃</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <span class="d-none d-sm-inline-block" style="margin-left: 1rem;color: gray;">|</span>
+              <li class="d-none d-sm-inline-block nav-item">
+                <a href="javascript:void(0)" class="btn btn-sm">
+                  <i class="bx bx-log-out-circle me-1"></i>로그아웃
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- / Navbar -->
+
+        <!-- Content wrapper -->
+        <div class="content-wrapper">
+          <!-- Content -->
+
+          <div class="container-fluid navbar-expand-xl flex-grow-1 container-p-y">
+            <div class="row">
+              <!-- Order Statistics -->
+              <div class="col-md-12 col-lg-6 col-xl-6 col-xxl-4 order-0 mb-6">
+                <div class="card">
+                  <h5 class="card-header fw-bold">공지사항</h5>
+                  <div class="table-responsive text-nowrap p-2 pt-0">
+                    <table class="table table-hover">
+                      <thead class="table-light">
+                        <tr>
+                          <th class="fw-bold col-1 text-center px-2 py-3">날짜</th>
+                          <th class="fw-bold col-11 text-center px-2 py-3">제목</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table-border-bottom-0">
+                        <tr>
+                          <td><span>01/16</span></td>
+                          <td>유제품 등 온도관리 필요품목 취급불가 안내</td>
+                        </tr>
+                        <tr>
+                          <td><span>01/15</span></td>
+                          <td>한국발 국제선 24년 12월 공지</td>
+                        </tr>
+                        <!-- <tr>
+                          <td><span>01/12</span></td>
+                          <td>항공 유류할증료(FSC) 요율 수정안</td>
+                        </tr>
+                        <tr>
+                          <td><span>01/10</span></td>
+                          <td>OMS 버전 업데이트 기획</td>
+                        </tr> -->
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- Expense Overview -->
+              <div class="col-md-12 col-lg-6 col-xl-6 col-xxl-4 order-1 mb-6">
+                <div class="card h-100">
+                  <h5 class="card-header fw-bold">화물조회</h5>
+                  <div class="card-body">
+                    <div class="input-group">
+                      <button class="btn btn-outline-primary dropdown-toggle fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        개별
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item fw-bold" href="javascript:void(0);">개별</a></li>
+                        <li><a class="dropdown-item fw-bold" href="javascript:void(0);">복수</a></li>
+                        <li><a class="dropdown-item fw-bold" href="javascript:void(0);">미입고</a></li>
+                      </ul>
+                      <input type="text" class="form-control" aria-label="Text input with dropdown button" style="line-height: 1.9rem" placeholder="화물 번호를 입력해주세요">
+                    </div>
+                    <div class="w-100 mt-4">
+                      <button class="btn btn-primary btn-lg w-100" type="button">화물 정보 조회하기</button>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+              <!-- Transactions -->
+              <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-4 order-2 mb-6">
+                <div class="card h-100">
+                  <div class="d-flex align-items-start row">
+                    <div class="col-sm-7">
+                      <div class="card-body" style="padding-right: 0;">
+                        <h4 class="card-title text-primary mb-3 fw-bold">As Slim As Possible, with EXMATE</h4>
+                        <p class="mb-6">
+                          <!-- You have done 72% more sales today.<br />Check your new badge in your profile. -->
+                        </p>
+                        <a href="https://www.mangoboard.net/publish/28067758" class="btn btn-sm btn-outline-primary fw-bold" style="margin-top: 2rem;">eXmate 2023</a>
+                      </div>
+                    </div>
+                    <div class="col-sm-5 text-center text-sm-left">
+                      <div class="card-body pb-0 px-0 px-md-6" style="transform: translate(-2.5rem, 0);">
+                        <img src="../../assets/img/illustrations/man-with-laptop.png" height="175" class="scaleX-n1-rtl"
+                          alt="View Badge User" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <!--/ Transactions -->
             </div>
-          </nav>
 
-          <!-- / Navbar -->
-
-          <!-- Content wrapper -->
-          <div class="content-wrapper">
-            <!-- Content -->
-
-            <div class="container-fluid navbar-expand-xl flex-grow-1 container-p-y">
-              <div class="row">
-                <!-- Order Statistics -->
-                <div class="col-md-6 col-lg-4 col-xl-4 order-0 mb-6">
-                  <div class="card">
-                    <h5 class="card-header">공지사항</h5>
-                    <div class="table-responsive text-nowrap">
-                      <table class="table table-hover">
-                        <thead class="table-light">
-                          <tr>
-                            <th class="fw-bold col-1">날짜</th>
-                            <th class="fw-bold">제목</th>
-                          </tr>
-                        </thead>
+            <div class="row">
+              <div class="col-xxl-6 mb-6 order-0">
+                <div class="card h-100">
+                  <div class="card-header d-flex align-items-center justify-content-between">
+                    <div class="card-title mb-0">
+                      <h5 class="m-0 me-2 fw-bold">25년 01월 기준</h5>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="d-none d-lg-flex vehicles-progress-labels mb-6">
+                      <div class="vehicles-progress-label on-the-way-text" style="width: 55%">배송완료</div>
+                      <div class="vehicles-progress-label unloading-text" style="width: 25%">배송 미완료</div>
+                      <div class="vehicles-progress-label loading-text" style="width: 20%">미배송 사유발생</div>
+                      <!-- <div class="vehicles-progress-label waiting-text text-nowrap" style="width: 14.6%">Waiting</div> -->
+                    </div>
+                    <div class="vehicles-overview-progress progress rounded-3 mb-6 bg-transparent overflow-hidden"
+                      style="height: 46px">
+                      <div class="progress-bar fw-medium text-start shadow-none bg-lighter text-heading px-4 rounded-0"
+                        role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                        55%
+                      </div>
+                      <div class="progress-bar fw-medium text-start shadow-none bg-primary px-4" role="progressbar"
+                        style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                        25%
+                      </div>
+                      <div class="progress-bar fw-medium text-start shadow-none text-bg-info px-2 px-sm-4 rounded-0"
+                        role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                        20%
+                      </div>
+                    </div>
+                    <div class="table-responsive">
+                      <table class="table card-table table-border-top-0">
                         <tbody class="table-border-bottom-0">
                           <tr>
-                            <td><span>2025.01.16</span></td>
-                            <td>Jerry Milton</td>
+                            <td class="w-50 ps-0">
+                              <div class="d-flex justify-content-start align-items-center">
+                                <div class="me-2">
+                                  <i class="icon-base bx bx-car icon-lg text-heading"></i>
+                                </div>
+                                <h6 class="mb-0 fw-normal">배송완료</h6>
+                              </div>
+                            </td>
+                            <td class="text-end pe-0 text-nowrap">
+                              <h6 class="mb-0">1,100건</h6>
+                            </td>
+                            <td class="text-end pe-0">
+                              <span>55%</span>
+                            </td>
                           </tr>
                           <tr>
-                            <td><span>2025.01.16</span></td>
-                            <td>Jerry Milton</td>
+                            <td class="w-50 ps-0">
+                              <div class="d-flex justify-content-start align-items-center">
+                                <div class="me-2">
+                                  <i class="icon-base bx bx-down-arrow-circle icon-lg text-heading"></i>
+                                </div>
+                                <h6 class="mb-0 fw-normal">배송 미완료</h6>
+                              </div>
+                            </td>
+                            <td class="text-end pe-0 text-nowrap">
+                              <h6 class="mb-0">500건</h6>
+                            </td>
+                            <td class="text-end pe-0">
+                              <span>25%</span>
+                            </td>
                           </tr>
                           <tr>
-                            <td><span>2025.01.16</span></td>
-                            <td>Jerry Milton</td>
-                          </tr>
-                          <tr>
-                            <td><span>2025.01.16</span></td>
-                            <td>Jerry Milton</td>
+                            <td class="w-50 ps-0">
+                              <div class="d-flex justify-content-start align-items-center">
+                                <div class="me-2">
+                                  <i class="icon-base bx bx-up-arrow-circle icon-lg text-heading"></i>
+                                </div>
+                                <h6 class="mb-0 fw-normal">미배송 사유발생</h6>
+                              </div>
+                            </td>
+                            <td class="text-end pe-0 text-nowrap">
+                              <h6 class="mb-0">400건</h6>
+                            </td>
+                            <td class="text-end pe-0">
+                              <span>20%</span>
+                            </td>
                           </tr>
                         </tbody>
                       </table>
                     </div>
                   </div>
                 </div>
-                <!--/ Order Statistics -->
-
-                <!-- Expense Overview -->
-                <div class="col-md-6 col-lg-4 order-1 mb-6">
-                  <div class="card h-100">
-                    <div class="card-header nav-align-top">
-                      <ul class="nav nav-pills" role="tablist">
-                        <li class="nav-item">
-                          <button
-                            type="button"
-                            class="nav-link active"
-                            role="tab"
-                            data-bs-toggle="tab"
-                            data-bs-target="#navs-tabs-line-card-income"
-                            aria-controls="navs-tabs-line-card-income"
-                            aria-selected="true">
-                            Income
-                          </button>
-                        </li>
-                        <li class="nav-item">
-                          <button type="button" class="nav-link" role="tab">Expenses</button>
-                        </li>
-                        <li class="nav-item">
-                          <button type="button" class="nav-link" role="tab">Profit</button>
-                        </li>
+              </div>
+              <div class="col-xxl-6 mb-6 order-0">
+                <div class="card h-100">
+                  <div class="card-header d-flex align-items-center justify-content-between">
+                    <div class="card-title mb-0">
+                      <h5 class="mb-1 fw-bold">배송실적</h5>
+                      <p class="card-subtitle">2025.01.13 ~ 2025.01.16</p>
+                    </div>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-label-primary">이번 주</button>
+                      <button type="button" class="btn btn-label-primary dropdown-toggle dropdown-toggle-split"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="visually-hidden">Toggle Dropdown</span>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="javascript:void(0);">이번 주</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0);">이번 달</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0);">이번 분기</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0);">이번 연도</a></li>
                       </ul>
                     </div>
-                    <div class="card-body">
-                      <div class="tab-content p-0">
-                        <div class="tab-pane fade show active" id="navs-tabs-line-card-income" role="tabpanel">
-
-                        </div>
-                      </div>
-                    </div>
                   </div>
-                </div>
-                <!--/ Expense Overview -->
-
-                <!-- Transactions -->
-                <div class="col-md-6 col-lg-4 order-2 mb-6">
-                  <div class="card">
-                    <div class="d-flex align-items-start row">
-                      <div class="col-sm-7">
-                        <div class="card-body">
-                          <h5 class="card-title text-primary mb-3">Congratulations John! 🎉</h5>
-                          <p class="mb-6">
-                            You have done 72% more sales today.<br />Check your new badge in your profile.
-                          </p>
-
-                          <a href="javascript:;" class="btn btn-sm btn-outline-primary">View Badges</a>
-                        </div>
-                      </div>
-                      <div class="col-sm-5 text-center text-sm-left">
-                        <div class="card-body pb-0 px-0 px-md-6">
-                          <img
-                            src="../assets/img/illustrations/man-with-laptop.png"
-                            height="175"
-                            class="scaleX-n1-rtl"
-                            alt="View Badge User" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-                <!--/ Transactions -->
-              </div>
-
-              <div class="row">
-                <div class="col-xxl-12 mb-6 order-0">
-                  <div class="card h-100">
-                    <div class="card-header d-flex align-items-center justify-content-between">
-                      <div class="card-title mb-0">
-                        <h5 class="m-0 me-2">25년 01월 기준</h5>
-                      </div>
-                      <!-- <div class="dropdown">
-                        <button
-                          class="btn p-0"
-                          type="button"
-                          id="vehiclesOverview"
-                          data-bs-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false">
-                          <i class="icon-base bx bx-dots-vertical-rounded icon-lg text-body-secondary"></i>
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="vehiclesOverview">
-                          <a class="dropdown-item" href="javascript:void(0);">Select All</a>
-                          <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
-                          <a class="dropdown-item" href="javascript:void(0);">Share</a>
-                        </div>
-                      </div> -->
-                    </div>
-                    <div class="card-body">
-                      <div class="d-none d-lg-flex vehicles-progress-labels mb-6">
-                        <div class="vehicles-progress-label on-the-way-text" style="width: 70%">배송완료</div>
-                        <div class="vehicles-progress-label unloading-text" style="width: 20%">배송 미완료</div>
-                        <div class="vehicles-progress-label loading-text" style="width: 10%">미배송 사유발생</div>
-                        <!-- <div class="vehicles-progress-label waiting-text text-nowrap" style="width: 14.6%">Waiting</div> -->
-                      </div>
-                      <div
-                        class="vehicles-overview-progress progress rounded-3 mb-6 bg-transparent overflow-hidden"
-                        style="height: 46px">
-                        <div
-                          class="progress-bar fw-medium text-start shadow-none bg-lighter text-heading px-4 rounded-0"
-                          role="progressbar"
-                          style="width: 70%"
-                          aria-valuenow="70"
-                          aria-valuemin="0"
-                          aria-valuemax="100">
-                          70%
-                        </div>
-                        <div
-                          class="progress-bar fw-medium text-start shadow-none bg-primary px-4"
-                          role="progressbar"
-                          style="width: 20%"
-                          aria-valuenow="20"
-                          aria-valuemin="0"
-                          aria-valuemax="100">
-                          20%
-                        </div>
-                        <div
-                          class="progress-bar fw-medium text-start shadow-none text-bg-info px-2 px-sm-4 rounded-0"
-                          role="progressbar"
-                          style="width: 10%"
-                          aria-valuenow="10"
-                          aria-valuemin="0"
-                          aria-valuemax="100">
-                          10%
-                        </div>
-                      </div>
-                      <div class="table-responsive">
-                        <table class="table card-table table-border-top-0">
-                          <tbody class="table-border-bottom-0">
-                            <tr>
-                              <td class="w-50 ps-0">
-                                <div class="d-flex justify-content-start align-items-center">
-                                  <div class="me-2">
-                                    <i class="icon-base bx bx-car icon-lg text-heading"></i>
-                                  </div>
-                                  <h6 class="mb-0 fw-normal">배송완료</h6>
-                                </div>
-                              </td>
-                              <td class="text-end pe-0 text-nowrap">
-                                <h6 class="mb-0">1050건</h6>
-                              </td>
-                              <td class="text-end pe-0">
-                                <span>70%</span>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="w-50 ps-0">
-                                <div class="d-flex justify-content-start align-items-center">
-                                  <div class="me-2">
-                                    <i class="icon-base bx bx-down-arrow-circle icon-lg text-heading"></i>
-                                  </div>
-                                  <h6 class="mb-0 fw-normal">배송 미완료</h6>
-                                </div>
-                              </td>
-                              <td class="text-end pe-0 text-nowrap">
-                                <h6 class="mb-0">300건</h6>
-                              </td>
-                              <td class="text-end pe-0">
-                                <span>20%</span>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="w-50 ps-0">
-                                <div class="d-flex justify-content-start align-items-center">
-                                  <div class="me-2">
-                                    <i class="icon-base bx bx-up-arrow-circle icon-lg text-heading"></i>
-                                  </div>
-                                  <h6 class="mb-0 fw-normal">미배송 사유발생</h6>
-                                </div>
-                              </td>
-                              <td class="text-end pe-0 text-nowrap">
-                                <h6 class="mb-0">150건</h6>
-                              </td>
-                              <td class="text-end pe-0">
-                                <span>10%</span>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
+                  <div class="card-body">
+                    <div id="shipmentStatisticsChart"></div>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- / Content -->
+          </div>
+          <!-- / Content -->
 
-            <!-- Footer -->
-            <footer class="content-footer footer bg-footer-theme">
-              <div class="container-fluid">
-                <div
-                  class="footer-container d-flex align-items-center justify-content-between py-4 flex-md-row flex-column">
-                  <div class="text-body">
-                    ©
-                    <script>
-                      document.write(new Date().getFullYear());
-                    </script>
-                    , made with ❤️ by
-                    <a href="https://themeselection.com" target="_blank" class="footer-link">ThemeSelection</a>
-                  </div>
-                  <div class="d-none d-lg-inline-block">
-                    <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
-                    <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
-
-                    <a
-                      href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/documentation/"
-                      target="_blank"
-                      class="footer-link me-4"
-                      >Documentation</a
-                    >
-
-                    <a
-                      href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
-                      target="_blank"
-                      class="footer-link"
-                      >Support</a
-                    >
-                  </div>
+          <!-- Footer -->
+          <footer class="content-footer footer bg-footer-theme" style="background:#d2d3ff;">
+            <div class="container-fluid">
+              <div
+                class="footer-container d-flex align-items-center justify-content-between py-4 flex-md-row flex-column">
+                <div class="text-body w-100 text-center">
+                  Copyright © 2023
+                  <a href="https://exmate.net/" target="_blank" class="footer-link">eXmate.</a>
+                  All rights reserved
                 </div>
               </div>
-            </footer>
-            <!-- / Footer -->
+            </div>
+          </footer>
+          <!-- / Footer -->
 
-            <div class="content-backdrop fade"></div>
-          </div>
-          <!-- Content wrapper -->
+          <div class="content-backdrop fade"></div>
         </div>
-        <!-- / Layout page -->
+        <!-- Content wrapper -->
       </div>
-
-      <!-- Overlay -->
-      <div class="layout-overlay layout-menu-toggle"></div>
-
-      <!-- Drag Target Area To SlideIn Menu On Small Screens -->
-      <div class="drag-target"></div>
+      <!-- / Layout page -->
     </div>
-    <!-- / Layout wrapper -->
 
-    <!-- Core JS -->
-    <!-- build:js assets/vendor/js/theme.js  -->
+    <!-- Overlay -->
+    <div class="layout-overlay layout-menu-toggle"></div>
 
-    <script src="../../assets/vendor/libs/jquery/jquery.js"></script>
+    <!-- Drag Target Area To SlideIn Menu On Small Screens -->
+    <div class="drag-target"></div>
+  </div>
+  <!-- / Layout wrapper -->
 
-    <script src="../../assets/vendor/libs/popper/popper.js"></script>
-    <script src="../../assets/vendor/js/bootstrap.js"></script>
-    <script src="../../assets/vendor/libs/@algolia/autocomplete-js.js"></script>
+  <!-- Core JS -->
+  <!-- build:js assets/vendor/js/theme.js  -->
 
-    <script src="../../assets/vendor/libs/pickr/pickr.js"></script>
+  <script src="../../assets/vendor/libs/jquery/jquery.js"></script>
 
-    <script src="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+  <script src="../../assets/vendor/libs/popper/popper.js"></script>
+  <script src="../../assets/vendor/js/bootstrap.js"></script>
+  <script src="../../assets/vendor/libs/@algolia/autocomplete-js.js"></script>
 
-    <script src="../../assets/vendor/libs/hammer/hammer.js"></script>
+  <script src="../../assets/vendor/libs/pickr/pickr.js"></script>
 
-    <script src="../../assets/vendor/js/menu.js"></script>
+  <script src="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
 
-    <!-- endbuild -->
+  <script src="../../assets/vendor/libs/hammer/hammer.js"></script>
+  <script src="../../assets/vendor/libs/i18n/i18n.js"></script>
+  <script src="../../assets/vendor/js/menu.js"></script>
 
-    <!-- Vendors JS -->
+  <!-- endbuild -->
 
-    <!-- Main JS -->
+  <!-- Vendors JS -->
+  <script src="../../assets/vendor/libs/apex-charts/apexcharts.js"></script>
+  <script src="../../assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
 
-    <script src="../../assets/js/main.js"></script>
+  <!-- Main JS -->
+
+  <script src="../../assets/js/main.js"></script>
 
     <!-- Page JS -->
-  </body>
+    <script src="../../assets/js/app-logistics-dashboard.js"></script>
+</body>
+
 </html>
