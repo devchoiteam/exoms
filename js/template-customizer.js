@@ -80,15 +80,15 @@ class TemplateCustomizer {
     this.settings.displayCustomizer = typeof displayCustomizer !== 'undefined' ? displayCustomizer : DISPLAY_CUSTOMIZER
     
     // this.settings.lang = lang || 'en'
-    // if (defaultPrimaryColor) {
-    //   this.settings.defaultPrimaryColor = defaultPrimaryColor
-    //   primaryColorFlag = true
-    // } else {
-    //   this.settings.defaultPrimaryColor = rootStyles.getPropertyValue('--bs-primary').trim()
-    //   primaryColorFlag = false
-    // }
+    if (defaultPrimaryColor) {
+      this.settings.defaultPrimaryColor = defaultPrimaryColor
+      primaryColorFlag = true
+    } else {
+      this.settings.defaultPrimaryColor = rootStyles.getPropertyValue('--bs-primary').trim()
+      primaryColorFlag = false
+    }
     this.settings.lang = 'en'
-    this.settings.defaultPrimaryColor = 'info'
+    // this.settings.defaultPrimaryColor = 'info'
     primaryColorFlag = true
 
     this.settings.defaultTheme = defaultTheme || DEFAULT_THEME

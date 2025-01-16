@@ -10,7 +10,8 @@
   white-space: nowrap;
 }
 .pricing-plans-comparison .table tbody tr:last-child td {
-  border-block-end: 0;
+  -webkit-border-after: 0;
+          border-block-end: 0;
 }
 
 .price-yearly-toggle {

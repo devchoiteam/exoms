@@ -44,7 +44,8 @@
   inline-size: 100%;
 }
 #swiper-gallery .gallery-thumbs {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   block-size: 20%;
   padding-block: 10px;
   padding-inline: 0;

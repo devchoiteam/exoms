@@ -9,19 +9,24 @@
   position: absolute;
   z-index: 4;
   overflow: hidden;
-  flex-basis: 18.75rem;
-  flex-grow: 0;
+  -ms-flex-preferred-size: 18.75rem;
+      flex-basis: 18.75rem;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
   background-color: var(--bs-paper-bg);
   block-size: 100%;
   inline-size: 18.75rem;
   inset-inline-start: calc(-18.75rem - 1.2rem);
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 .app-calendar-wrapper .app-calendar-sidebar.show {
   inset-inline-start: 0;
 }
 .app-calendar-wrapper .app-calendar-sidebar .flatpickr-calendar {
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 .app-calendar-wrapper .app-calendar-sidebar .flatpickr-calendar .flatpickr-month,
 .app-calendar-wrapper .app-calendar-sidebar .flatpickr-calendar .flatpickr-weekday,
@@ -50,22 +55,28 @@
   overflow: auto;
 }
 .app-calendar-wrapper table.fc-scrollgrid {
-  border-inline-end: 0;
-  border-inline-start: 0;
+  -webkit-border-end: 0;
+          border-inline-end: 0;
+  -webkit-border-start: 0;
+          border-inline-start: 0;
 }
 .app-calendar-wrapper table.fc-scrollgrid th,
 .app-calendar-wrapper table.fc-scrollgrid td {
-  border-inline-end: 0;
+  -webkit-border-end: 0;
+          border-inline-end: 0;
 }
 .app-calendar-wrapper .fc-timeGridDay-view table.fc-scrollgrid tbody tr:not(.fc-scrollgrid-section:first-of-type) td,
 .app-calendar-wrapper .fc-timeGridWeek-view table.fc-scrollgrid tbody tr:not(.fc-scrollgrid-section:first-of-type) td {
-  border-block-end: 0;
+  -webkit-border-after: 0;
+          border-block-end: 0;
 }
 .app-calendar-wrapper .fc-dayGridMonth-view table.fc-scrollgrid td {
-  border-block-end: 0;
+  -webkit-border-after: 0;
+          border-block-end: 0;
 }
 .app-calendar-wrapper .fc-header-toolbar {
-  margin-block-end: 1.4rem !important;
+  -webkit-margin-after: 1.4rem !important;
+          margin-block-end: 1.4rem !important;
 }
 .app-calendar-wrapper .fc-view-container {
   margin-block: 0;

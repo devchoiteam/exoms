@@ -16,7 +16,8 @@
 }
 .invoice-edit .invoice-preview-card .repeater-wrapper:not(:last-child),
 .invoice-add .invoice-preview-card .repeater-wrapper:not(:last-child) {
-  margin-block-end: 1.5rem;
+  -webkit-margin-after: 1.5rem;
+          margin-block-end: 1.5rem;
 }
 @media print {
   .invoice-edit hr,

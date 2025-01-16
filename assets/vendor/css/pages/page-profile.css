@@ -3,11 +3,13 @@
 .user-profile-header-banner img {
   block-size: 250px;
   inline-size: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .user-profile-header {
-  margin-block-start: -2rem;
+  -webkit-margin-before: -2rem;
+          margin-block-start: -2rem;
 }
 .user-profile-header .user-profile-img {
   border: 5px solid;

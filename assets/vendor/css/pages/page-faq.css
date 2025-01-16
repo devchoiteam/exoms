@@ -27,8 +27,10 @@
   inline-size: 100%;
   inset-block-start: 0;
   inset-inline-start: 0;
-  object-fit: cover;
-  object-position: left;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left;
+     object-position: left;
 }
 
 .bg-faq-section {

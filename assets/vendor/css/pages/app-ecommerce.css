@@ -15,7 +15,9 @@
 
 @media (max-width: 575.98px) {
   .widget-separator .border-shift.border-end {
-    border-inline-end: none !important;
-    border-inline-start: none !important;
+    -webkit-border-end: none !important;
+            border-inline-end: none !important;
+    -webkit-border-start: none !important;
+            border-inline-start: none !important;
   }
 }
