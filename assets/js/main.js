@@ -126,7 +126,135 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+  // 배송등록 > 수기등록 탭 > 테이블 전체 체크박스 버튼 클릭
+  document.addEventListener('DOMContentLoaded', function () {
+    const selectAllCheckbox = document.getElementById('table-hands-checkbox-all');
 
+    if (selectAllCheckbox) {
+      selectAllCheckbox.addEventListener('change', function () {
+        const table = selectAllCheckbox.closest('table'); // 테이블 찾기
+        if (!table) return;
+
+        const checkboxes = table.querySelectorAll('tbody input[type="checkbox"]'); // tbody 내 체크박스 찾기
+        checkboxes.forEach(checkbox => {
+          checkbox.checked = selectAllCheckbox.checked;
+        });
+      });
+    }
+  });
+  document.addEventListener('DOMContentLoaded', function () {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"].fast-link');
+    const storageKey = 'fastlink'; // 로컬스토리지 키
+    const buttonContainer = document.getElementById('button-container'); // 버튼을 표시할 영역
+
+    // 기존에 저장된 배열 불러오기
+    function getStoredArray() {
+      const storedData = localStorage.getItem(storageKey);
+      return storedData ? JSON.parse(storedData) : [];
+    }
+
+    // 버튼 목록을 화면에 업데이트
+    function updateButtons() {
+      buttonContainer.innerHTML = ''; // 기존 버튼 초기화
+      const storedArray = getStoredArray();
+
+      storedArray.forEach(item => {
+        const button = document.createElement('button');
+        button.textContent = item; // 버튼 텍스트를 체크박스 ID로 설정
+        button.setAttribute('data-id', item); // 버튼에 ID 저장
+
+        // 버튼 클릭 시: 해당 항목을 localStorage에서 삭제하고 화면에서 버튼 제거
+        button.addEventListener('click', () => {
+          let updatedArray = getStoredArray().filter(item2 => item2 !== item); // 체크 해제된 항목 제거
+          localStorage.setItem('fastlink', JSON.stringify(updatedArray)); // 로컬스토리지 업데이트          document.getElementById(item).checked = false; // 체크박스도 해제
+          updateButtons(); // 버튼 목록 업데이트
+        });
+
+        buttonContainer.appendChild(button);
+      });
+    }
+
+    // 체크박스 상태를 로드 & 버튼 업데이트
+    const storedArray = getStoredArray();
+    checkboxes.forEach(checkbox => {
+      if (storedArray.includes(checkbox.id)) {
+        checkbox.checked = true;
+      }
+
+      checkbox.addEventListener('change', function () {
+        let updatedArray = getStoredArray();
+
+        if (this.checked) {
+          if (!updatedArray.includes(this.id)) {
+            updatedArray.push(this.id); // 체크된 항목 추가
+          }
+        } else {
+          updatedArray = updatedArray.filter(item => item !== this.id); // 체크 해제된 항목 제거
+        }
+
+        localStorage.setItem(storageKey, JSON.stringify(updatedArray));
+        updateButtons(); // 버튼 업데이트
+      });
+    });
+
+    updateButtons(); // 초기 버튼 렌더링
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const translationFile = '../../translations.json'; // JSON 파일 경로
+    let translations = {};
+
+    // JSON 파일 로드
+    fetch(translationFile)
+      .then(response => response.json())
+      .then(data => {
+        translations = data;
+      })
+      .catch(error => console.error('번역 파일을 불러오는 중 오류 발생:', error));
+
+    // 번역 적용 함수
+    function translatePage(language) {
+      document.querySelectorAll('[data-key]').forEach(element => {
+        const key = element.getAttribute('data-key');
+        if (translations[key] && translations[key][language]) {
+          element.textContent = translations[key][language];
+        }
+      });
+    }
+
+    // 버튼 클릭 이벤트 추가
+    document.getElementById('btn-ko').addEventListener('click', () => translatePage('ko'));
+    document.getElementById('btn-ja').addEventListener('click', () => translatePage('ja'));
+    document.getElementById('btn-en').addEventListener('click', () => translatePage('en'));
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const fullscreenButton = document.getElementById('fullscreen-toggle');
+
+    fullscreenButton.addEventListener('click', function () {
+      if (!document.fullscreenElement) {
+        // 전체화면 모드로 전환
+        document.documentElement
+          .requestFullscreen()
+          .then(() => {
+            fullscreenButton.innerHTML = '<i class="icon-base bx bx-exit-fullscreen me-1"></i>일반화면';
+          })
+          .catch(err => {
+            console.error('전체화면 전환 실패:', err);
+          });
+      } else {
+        // 전체화면 모드 해제
+        document
+          .exitFullscreen()
+          .then(() => {
+            fullscreenButton.innerHTML = '<i class="icon-base bx bx-fullscreen me-1"></i>전체화면';
+          })
+          .catch(err => {
+            console.error('전체화면 종료 실패:', err);
+          });
+      }
+    });
+  });
   // Display menu toggle (layout-menu-toggle) on hover with delay
   let delay = function (elem, callback) {
     let timeout = null;

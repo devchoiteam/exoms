@@ -1,0 +1,27 @@
+{
+    "hello": {
+        "ko": "안녕하세요",
+        "ja": "こんにちは",
+        "en": "Hello"
+    },
+    "goodbye": {
+        "ko": "안녕히 가세요",
+        "ja": "さようなら",
+        "en": "Goodbye"
+    },
+    "thank_you": {
+        "ko": "감사합니다",
+        "ja": "ありがとう",
+        "en": "Thank you"
+    },
+    "as": {
+        "ko": "가능한 슬림하게",
+        "ja": "可能な限りスリムに、",
+        "en": "As Slim As Possible,"
+    },
+    "with": {
+        "ko": "EXMATE와 함께",
+        "ja": "EXMATEとともに",
+        "en": "with EXMATE"
+    }
+}

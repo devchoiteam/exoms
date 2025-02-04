@@ -119,7 +119,9 @@
         </div>
 
         <div class="menu-inner-shadow"></div>
-
+        <!-- 체크된 항목 버튼이 표시될 영역 -->
+        
+        
         <ul class="menu-inner py-1">
           <!-- Dashboards -->
           <!-- <li class="menu-header small text-uppercase">
@@ -135,7 +137,7 @@
                     <a href="dashboard.html" class="menu-link">
                       <label class="list-group-item w-100">
                         <div class="text-truncate w-100" >대시보드
-                          <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
+                          <input class="form-check-input me-3 fast-link" style="float: right" type="checkbox" value="" id="dashboard"/>
                         </div>
                       </label>
                     </a>
@@ -144,7 +146,7 @@
                     <a href="notice.html" class="menu-link">
                       <label class="list-group-item w-100">
                         <div class="text-truncate w-100" >공지사항
-                          <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
+                          <input id="notice" class="fast-link form-check-input me-3" style="float: right" type="checkbox" value="" />
                         </div>
                       </label>
                     </a>
@@ -161,7 +163,7 @@
                 <a href="pages-misc-error.html" class="menu-link">
                   <label class="list-group-item w-100">
                     <div class="text-truncate w-100" >센터관리
-                      <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
+                      <input id="pages" class="fast-link form-check-input me-3" style="float: right" type="checkbox" value="" />
                     </div>
                   </label>
                 </a>
@@ -179,7 +181,7 @@
                 <a href="shipping-register.html" class="menu-link">
                   <label class="list-group-item w-100">
                     <div class="text-truncate" >배송등록
-                      <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
+                      <input id="shipping" class="fast-link form-check-input me-3" style="float: right" type="checkbox" value="" />
                     </div>
                   </label>
                 </a>
@@ -188,7 +190,7 @@
                 <a href="packing-list.html" class="menu-link">
                   <label class="list-group-item w-100">
                     <div class="text-truncate" >패킹리스트
-                      <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
+                      <input id="packing" class="fast-link form-check-input me-3" style="float: right" type="checkbox" value="" />
                     </div>
                   </label>
                 </a>
@@ -197,7 +199,7 @@
                 <a href="deleted-list.html" class="menu-link">
                   <label class="list-group-item w-100">
                     <div class="text-truncate" >삭제목록
-                      <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
+                      <input id="deleted" class="fast-link form-check-input me-3" style="float: right" type="checkbox" value="" />
                     </div>
                   </label>
                 </a>
@@ -214,7 +216,7 @@
                 <a href="daily-inbound.html" class="menu-link" target="_blank">
                   <label class="list-group-item w-100">
                     <div class="text-truncate" >일별 입고 현황
-                      <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
+                      <input id="daily" class="fast-link form-check-input me-3" style="float: right" type="checkbox" value="" />
                     </div>
                   </label>
                 </a>
@@ -223,7 +225,7 @@
                 <a href="shipment-list.html" class="menu-link" target="_blank">
                   <label class="list-group-item w-100">
                     <div class="text-truncate" >발송목록
-                      <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
+                      <input id="shipment" class="fast-link form-check-input me-3" style="float: right" type="checkbox" value="" />
                     </div>
                   </label>
                 </a>
@@ -232,7 +234,7 @@
                 <a href="shipping-status.html" class="menu-link" target="_blank">
                   <label class="list-group-item w-100">
                     <div class="text-truncate" >배송현황
-                      <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
+                      <input id="shipping" class="fast-link form-check-input me-3" style="float: right" type="checkbox" value="" />
                     </div>
                   </label>
                 </a>
@@ -241,7 +243,7 @@
                 <a href="export-declaration.html" class="menu-link" target="_blank">
                   <label class="list-group-item w-100">
                     <div class="text-truncate" >수출신고
-                      <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
+                      <input id="export" class="fast-link form-check-input me-3" style="float: right" type="checkbox" value="" />
                     </div>
                   </label>
                 </a>
@@ -250,7 +252,7 @@
                 <a href="international-parcel-receiving.html" class="menu-link" target="_blank">
                   <label class="list-group-item w-100">
                     <div class="text-truncate" >해외배송 소포 수령중
-                      <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
+                      <input id="international" class="fast-link form-check-input me-3" style="float: right" type="checkbox" value="" />
                     </div>
                   </label>
                 </a>
@@ -267,7 +269,7 @@
                 <a href="gift.html" class="menu-link">
                   <label class="list-group-item w-100">
                     <div class="text-truncate" >사은품관리
-                      <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
+                      <input id="gift" class="fast-link form-check-input me-3" style="float: right" type="checkbox" value="" />
                     </div>
                   </label>
                 </a>
@@ -284,7 +286,7 @@
                 <a href="returned-storage-list.html" class="menu-link">
                   <label class="list-group-item w-100">
                     <div class="text-truncate w-100" >반송 보관건 목록
-                      <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
+                      <input id="returned" class="fast-link form-check-input me-3" style="float: right" type="checkbox" value="" />
                     </div>
                   </label>
                 </a>
@@ -293,7 +295,7 @@
                 <a href="retrieval.html" class="menu-link">
                   <label class="list-group-item w-100">
                     <div class="text-truncate w-100" >회수
-                      <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
+                      <input id="retrieval" class="fast-link form-check-input me-3" style="float: right" type="checkbox" value="" />
                     </div>
                   </label>
                 </a>
@@ -310,7 +312,7 @@
                 <a href="profile.html" class="menu-link">
                   <label class="list-group-item w-100">
                     <div class="text-truncate" >내정보
-                      <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
+                      <input id="profile" class="fast-link form-check-input me-3" style="float: right" type="checkbox" value="" />
                     </div>
                   </label>
                 </a>
@@ -319,7 +321,7 @@
                 <a href="api-integratio.html" class="menu-link">
                   <label class="list-group-item w-100">
                     <div class="text-truncate" >API 연동
-                      <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
+                      <input id="api" class="fast-link form-check-input me-3" style="float: right" type="checkbox" value="" />
                     </div>
                   </label>
                 </a>
@@ -327,6 +329,7 @@
             </ul>
           </li>
         </ul>
+        <div id="button-container"></div> 
       </aside>
 
       <div class="menu-mobile-toggler d-xl-none rounded-1">
@@ -364,6 +367,30 @@
             <ul class="navbar-nav flex-row align-items-center ms-auto">
               <!-- Place this tag where you want the button to render. -->
               <!-- User -->
+              <div class="me-2 d-none d-lg-block"><button class="btn btn-outline-secondary btn-sm" id="fullscreen-toggle"><i class="icon-base bx bx-fullscreen me-1"></i>전체화면</button></div>
+              <li class="nav-item dropdown-language dropdown me-2 me-xl-0">
+                <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">
+                  <button class="btn btn-outline-secondary btn-sm"><i class="icon-base bx bx-globe icon-md me-1"></i> <span class="d-none d-sm-inline-block">한국(KO)</span></button>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a class="dropdown-item active" href="javascript:void(0);" data-language="en" data-text-direction="ltr" id="btn-ja">
+                      <span>일본</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="javascript:void(0);" data-language="fr" data-text-direction="ltr" id="btn-ko">
+                      <span>한국</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="javascript:void(0);" data-language="fr" data-text-direction="ltr" id="btn-en">
+                      <span>영어</span>
+                    </a>
+                  </li>
+                </ul>
+                
+              </li>
               <li class="nav-item navbar-dropdown dropdown-user dropdown">
                 <a class="nav-link dropdown-toggle hide-arrow p-0" href="javascript:void(0);" data-bs-toggle="dropdown">
                   홍길동(TS14215)
@@ -406,13 +433,13 @@
                   </li>
                   <li>
                     <a class="dropdown-item" href="javascript:void(0);">
-                      <i class="bx bx-power-off bx-md me-3"></i><span>로그아웃</span>
+                      <i class="bx bx-power-off bx-md me-3"></i><span >로그아웃</span>
                     </a>
                   </li>
                 </ul>
               </li>
-              <span class="d-none d-sm-inline-block" style="margin-left: 1rem;color: gray;">|</span>
-              <li class="d-none d-sm-inline-block nav-item">
+              <span class="d-none d-md-inline-block" style="margin-left: 1rem;color: gray;">|</span>
+              <li class="d-none d-md-inline-block nav-item">
                 <a href="javascript:void(0)" class="btn btn-sm">
                   <i class="bx bx-log-out-circle me-1"></i>로그아웃
                 </a>
@@ -429,7 +456,30 @@
 
           <div class="container-fluid navbar-expand-xl flex-grow-1 container-p-y">
             <div class="row">
-              <!-- Order Statistics -->
+                <div class="col-12"><div class="card" style="background: none; box-shadow: none;;"><h4 class="card-header fw-bold pt-0 pb-4 p-0">HOME </h4></div></div>
+                
+                <div class="col-12 mb-6 d-block d-xxl-none">
+                    <div class="card">
+                        <div class="d-flex align-items-start row">
+                          <div class="col-12 col-md-5 text-center text-sm-left">
+                              <div class="card-body pb-0 px-0 px-md-6" style="transform: scale(1.5) translate(0, -17%)">
+                                <img src="../../assets/img/pages/home-point.png" height="175" class="scaleX-n1-rtl"
+                                  alt="View Badge User" />
+                              </div>
+                            </div>
+                          <div class="col-12 col-md-7" >
+                            
+                            <div class="card-body mt-2" style="padding-right: 0;">
+                              <h5 class="card-title text-primary mb-3 fw-bold" style="font-size: 2.5rem; line-height: 4rem" >
+                                <a href="https://www.mangoboard.net/publish/28067758"> <span class="text-primary" data-key="as">As Slim As Possible,</span> </br><span class="text-primary-emphasis" data-key="with" style="color: navy !important"> with EXMATE !</span>
+                                </a><!-- <a href="https://www.mangoboard.net/publish/28067758" class="btn btn-outline-primary fw-bold" style=" margin-left: calc(100% - 28rem);">eXmate 2023</a></h5> -->
+                            </div>
+                          </div> 
+      
+                        </div>
+                      </div>
+                    </div>
+                <!-- Order Statistics -->
               <div class="col-md-12 col-lg-6 col-xl-6 col-xxl-4 order-0 mb-6">
                 <div class="card">
                   <h5 class="card-header fw-bold">공지사항</h5>
@@ -487,24 +537,25 @@
                 </div>
               </div>
               <!-- Transactions -->
-              <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-4 order-2 mb-6">
+              <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-4 order-2 mb-6 d-none d-xxl-block">
                 <div class="card h-100">
                   <div class="d-flex align-items-start row">
-                    <div class="col-sm-7">
-                      <div class="card-body" style="padding-right: 0;">
-                        <h4 class="card-title text-primary mb-3 fw-bold">As Slim As Possible, </br> with EXMATE</h4>
-                        <p class="mb-6">
+                    <div class="col-sm-5 text-center text-sm-left">
+                        <div class="card-body pb-0 px-0 px-md-6" style="transform: scale(1.5) translate(0, -10%)">
+                          <img src="../../assets/img/pages/home-point.png" height="175" class="scaleX-n1-rtl"
+                            alt="View Badge User" style=" " />
+                        </div>
+                      </div>
+                    <div class="col-sm-7 p-0">
+                      <div class="card-body ps-1" style="padding-right: 0;">
+                        <h5 class="card-title text-primary mb-3 fw-bold"style="font-size: 2rem; line-height: 2.6rem"><span class="text-primary">As Slim As Possible,</span> </br><span class="text-primary-emphasis" style="color: navy !important"> with EXMATE !</span></h5>
+                        <!-- <p class="mb-4" style="margin-bottom: 1.5rem !important;"> -->
                           <!-- You have done 72% more sales today.<br />Check your new badge in your profile. -->
                         </p>
-                        <a href="https://www.mangoboard.net/publish/28067758" class="btn btn-sm btn-outline-primary fw-bold" style="margin-top: 2rem;">eXmate 2023</a>
+                        <a href="https://www.mangoboard.net/publish/28067758" class="btn btn-outline-primary fw-bold" style="margin-top: 2rem; margin-left:10rem !important">eXmate 2023</a>
                       </div>
-                    </div>
-                    <div class="col-sm-5 text-center text-sm-left">
-                      <div class="card-body pb-0 px-0 px-md-6" style="transform: translate(-2.5rem, 0);">
-                        <img src="../../assets/img/illustrations/man-with-laptop.png" height="175" class="scaleX-n1-rtl"
-                          alt="View Badge User" style="    filter: hue-rotate(318deg);" />
-                      </div>
-                    </div>
+                    </div> 
+
                   </div>
                 </div>
 
@@ -628,7 +679,11 @@
             </div>
           </div>
           <!-- / Content -->
-
+          <div id="content">
+            <span data-key="hello">안녕하세요</span>
+            <span data-key="goodbye">안녕히 가세요</span>
+            <span data-key="thank_you">감사합니다</span>
+        </div>
           <!-- Footer -->
           <footer class="content-footer footer bg-footer-theme" style="background:#D4DED6;">
             <div class="container-fluid">
