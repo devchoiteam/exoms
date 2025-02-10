@@ -34,12 +34,12 @@ document.addEventListener('DOMContentLoaded', function (e) {
     shipmentConfig = {
       series: [
         {
-          name: '배송 출발률',
+          name: 'Shipment',
           type: 'column',
           data: [38, 45, 33, 38, 32, 50, 48, 40, 42, 37]
         },
         {
-          name: '배송 완료율',
+          name: 'Delivery',
           type: 'line',
           data: [23, 28, 23, 32, 28, 44, 32, 38, 26, 34]
         }
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
       dataLabels: { enabled: false },
       xaxis: {
         tickAmount: 10,
-        categories: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월'],
+        categories: ['1 Jan', '2 Jan', '3 Jan', '4 Jan', '5 Jan', '6 Jan', '7 Jan', '8 Jan', '9 Jan', '10 Jan'],
         labels: {
           style: {
             colors: labelColor,

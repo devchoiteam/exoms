@@ -11,47 +11,68 @@ document.addEventListener('DOMContentLoaded', function () {
     if (formAuthentication && typeof FormValidation !== 'undefined') {
       FormValidation.formValidation(formAuthentication, {
         fields: {
-          userid: {
+          username: {
             validators: {
               notEmpty: {
-                message: '아이디를 입력하세요'
+                message: 'Please enter username'
               },
               stringLength: {
                 min: 6,
-                message: '사내 회원 아이디를 입력해주세요(6글자 이상)'
+                message: 'Username must be more than 6 characters'
+              }
+            }
+          },
+          email: {
+            validators: {
+              notEmpty: {
+                message: 'Please enter your email'
+              },
+              emailAddress: {
+                message: 'Please enter a valid email address'
+              }
+            }
+          },
+          'email-username': {
+            validators: {
+              notEmpty: {
+                message: 'Please enter email / username'
+              },
+              stringLength: {
+                min: 6,
+                message: 'Username must be more than 6 characters'
               }
             }
           },
           password: {
             validators: {
               notEmpty: {
-                message: '비밀번호를 입력하세요'
+                message: 'Please enter your password'
               },
               stringLength: {
                 min: 6,
-                message: '사내 회원 비밀번호를 입력해주세요(6글자 이상)'
+                message: 'Password must be more than 6 characters'
               }
             }
           },
           'confirm-password': {
             validators: {
               notEmpty: {
-                message: '비밀번호를 확인해주세요'
+                message: 'Please confirm password'
               },
               identical: {
                 compare: () => formAuthentication.querySelector('[name="password"]').value,
-                message: '비밀번호가 맞지 않습니다'
+                message: 'The password and its confirmation do not match'
               },
               stringLength: {
                 min: 6,
-                message: '비밀번호는 최소 6글자 이상입니다'
+                message: 'Password must be more than 6 characters'
               }
             }
           },
           terms: {
             validators: {
               notEmpty: {
-                message: '약관에 동의해주세요'
+                message: 'Please agree to terms & conditions'
               }
             }
           }
@@ -89,96 +110,5 @@ document.addEventListener('DOMContentLoaded', function () {
         });
       });
     }
-
-    // 로그인 실패 안내
-    // Modal id
-  const appModal = document.getElementById('createApp');
-
-  // Credit Card
-  const creditCardMask1 = document.querySelector('.app-credit-card-mask'),
-    expiryDateMask1 = document.querySelector('.app-expiry-date-mask'),
-    cvvMask1 = document.querySelector('.app-cvv-code-mask');
-  let cleave;
-
-  // Cleave JS card Mask
-  setTimeout(() => {
-    if (creditCardMask1) {
-      creditCardMask1.addEventListener('input', event => {
-        let cleanValue = event.target.value.replace(/\D/g, '');
-        let cardType = getCreditCardType(cleanValue);
-        creditCardMask1.value = formatCreditCard(cleanValue);
-        if (cardType && cardType !== 'unknown' && cardType !== 'general') {
-          document.querySelector('.app-card-type').innerHTML =
-            `<img src="${assetsPath}img/icons/payments/${cardType}-cc.png" height="20"/>`;
-        } else {
-          document.querySelector('.app-card-type').innerHTML = '';
-        }
-      });
-
-      registerCursorTracker({
-        input: creditCardMask1,
-        delimiter: ' '
-      });
-    }
-  }, 200);
-
-  // Expiry Date Mask
-  if (expiryDateMask1) {
-    expiryDateMask1.addEventListener('input', event => {
-      expiryDateMask1.value = formatDate(event.target.value, {
-        delimiter: '/',
-        datePattern: ['m', 'y']
-      });
-    });
-    registerCursorTracker({
-      input: expiryDateMask1,
-      delimiter: '/'
-    });
-  }
-
-  // CVV
-  if (cvvMask1) {
-    cvvMask1.addEventListener('input', event => {
-      const cleanValue = event.target.value.replace(/\D/g, '');
-      cvvMask1.value = formatNumeral(cleanValue, {
-        numeral: true,
-        numeralPositiveOnly: true
-      });
-    });
-  }
-  appModal.addEventListener('show.bs.modal', function (event) {
-    const wizardCreateApp = document.querySelector('#wizard-create-app');
-    if (typeof wizardCreateApp !== undefined && wizardCreateApp !== null) {
-      // Wizard next prev button
-      const wizardCreateAppNextList = [].slice.call(wizardCreateApp.querySelectorAll('.btn-next'));
-      const wizardCreateAppPrevList = [].slice.call(wizardCreateApp.querySelectorAll('.btn-prev'));
-      const wizardCreateAppBtnSubmit = wizardCreateApp.querySelector('.btn-submit');
-
-      const createAppStepper = new Stepper(wizardCreateApp, {
-        linear: false
-      });
-
-      if (wizardCreateAppNextList) {
-        wizardCreateAppNextList.forEach(wizardCreateAppNext => {
-          wizardCreateAppNext.addEventListener('click', event => {
-            createAppStepper.next();
-          });
-        });
-      }
-      if (wizardCreateAppPrevList) {
-        wizardCreateAppPrevList.forEach(wizardCreateAppPrev => {
-          wizardCreateAppPrev.addEventListener('click', event => {
-            createAppStepper.previous();
-          });
-        });
-      }
-
-      if (wizardCreateAppBtnSubmit) {
-        wizardCreateAppBtnSubmit.addEventListener('click', event => {
-          alert('Submitted..!!');
-        });
-      }
-    }
-
   })();
 });

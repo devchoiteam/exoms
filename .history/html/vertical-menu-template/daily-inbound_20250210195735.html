@@ -1,0 +1,1427 @@
+<!doctype html>
+
+<html
+  lang="en"
+  class="layout-navbar-fixed layout-menu-fixed layout-compact"
+  dir="ltr"
+  data-skin="default"
+  data-assets-path="../../assets/"
+  data-template="vertical-menu-template-starter"
+  data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <title>exOMS Sample Website</title>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../../assets/img/favicon/favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="../../assets/vendor/fonts/iconify-icons.css" />
+
+    <!-- Core CSS -->
+    <!-- build:css assets/vendor/css/theme.css  -->
+
+    <link rel="stylesheet" href="../../assets/vendor/libs/pickr/pickr-themes.css" />
+
+    <link rel="stylesheet" href="../../assets/vendor/css/core.css" />
+    <link rel="stylesheet" href="../../assets/css/demo.css" />
+
+    <!-- Vendors CSS -->
+
+    <link rel="stylesheet" href="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+
+    <!-- endbuild -->
+    <link rel="stylesheet" href="../../assets/vendor/libs/apex-charts/apex-charts.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../../assets/vendor/css/pages/app-logistics-dashboard.css" />
+    <!-- Helpers -->
+    <script src="../../assets/vendor/js/helpers.js"></script>
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+
+    <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
+    <!-- <script src="../../assets/vendor/js/template-customizer.js"></script> -->
+
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+
+    <script src="../../assets/js/config.js"></script>
+  </head>
+
+  <body>
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+      <div class="layout-container">
+        <!-- Menu -->
+
+        <aside id="layout-menu" class="layout-menu menu-vertical menu">
+          <div class="app-brand demo">
+            <a href="index.html" class="app-brand-link">
+              <span class="app-brand-logo demo">
+                <span class="text-primary">
+                  <svg
+                    width="25"
+                    viewBox="0 0 25 42"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <defs>
+                      <path
+                        d="M13.7918663,0.358365126 L3.39788168,7.44174259 C0.566865006,9.69408886 -0.379795268,12.4788597 0.557900856,15.7960551 C0.68998853,16.2305145 1.09562888,17.7872135 3.12357076,19.2293357 C3.8146334,19.7207684 5.32369333,20.3834223 7.65075054,21.2172976 L7.59773219,21.2525164 L2.63468769,24.5493413 C0.445452254,26.3002124 0.0884951797,28.5083815 1.56381646,31.1738486 C2.83770406,32.8170431 5.20850219,33.2640127 7.09180128,32.5391577 C8.347334,32.0559211 11.4559176,30.0011079 16.4175519,26.3747182 C18.0338572,24.4997857 18.6973423,22.4544883 18.4080071,20.2388261 C17.963753,17.5346866 16.1776345,15.5799961 13.0496516,14.3747546 L10.9194936,13.4715819 L18.6192054,7.984237 L13.7918663,0.358365126 Z"
+                        id="path-1"></path>
+                      <path
+                        d="M5.47320593,6.00457225 C4.05321814,8.216144 4.36334763,10.0722806 6.40359441,11.5729822 C8.61520715,12.571656 10.0999176,13.2171421 10.8577257,13.5094407 L15.5088241,14.433041 L18.6192054,7.984237 C15.5364148,3.11535317 13.9273018,0.573395879 13.7918663,0.358365126 C13.5790555,0.511491653 10.8061687,2.3935607 5.47320593,6.00457225 Z"
+                        id="path-3"></path>
+                      <path
+                        d="M7.50063644,21.2294429 L12.3234468,23.3159332 C14.1688022,24.7579751 14.397098,26.4880487 13.008334,28.506154 C11.6195701,30.5242593 10.3099883,31.790241 9.07958868,32.3040991 C5.78142938,33.4346997 4.13234973,34 4.13234973,34 C4.13234973,34 2.75489982,33.0538207 2.37032616e-14,31.1614621 C-0.55822714,27.8186216 -0.55822714,26.0572515 -4.05231404e-15,25.8773518 C0.83734071,25.6075023 2.77988457,22.8248993 3.3049379,22.52991 C3.65497346,22.3332504 5.05353963,21.8997614 7.50063644,21.2294429 Z"
+                        id="path-4"></path>
+                      <path
+                        d="M20.6,7.13333333 L25.6,13.8 C26.2627417,14.6836556 26.0836556,15.9372583 25.2,16.6 C24.8538077,16.8596443 24.4327404,17 24,17 L14,17 C12.8954305,17 12,16.1045695 12,15 C12,14.5672596 12.1403557,14.1461923 12.4,13.8 L10,7.13333333 C18.0627417,6.24967773 19.3163444,6.07059163 20.2,6.73333333 C20.3516113,6.84704183 20.4862915,6.981722 20.6,7.13333333 Z"
+                        id="path-5"></path>
+                    </defs>
+                    <g id="g-app-brand" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="Brand-Logo" transform="translate(-27.000000, -15.000000)">
+                        <g id="Icon" transform="translate(27.000000, 15.000000)">
+                          <g id="Mask" transform="translate(0.000000, 8.000000)">
+                            <mask id="mask-2" fill="white">
+                              <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use fill="currentColor" xlink:href="#path-1"></use>
+                            <g id="Path-3" mask="url(#mask-2)">
+                              <use fill="currentColor" xlink:href="#path-3"></use>
+                              <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-3"></use>
+                            </g>
+                            <g id="Path-4" mask="url(#mask-2)">
+                              <use fill="currentColor" xlink:href="#path-4"></use>
+                              <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-4"></use>
+                            </g>
+                          </g>
+                          <g
+                            id="Triangle"
+                            transform="translate(19.000000, 11.000000) rotate(-300.000000) translate(-19.000000, -11.000000) ">
+                            <use fill="currentColor" xlink:href="#path-5"></use>
+                            <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-5"></use>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </span>
+              </span>
+              <span class="app-brand-text demo menu-text fw-bold ms-2">exOMS</span>
+            </a>
+
+            <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
+              <i class="icon-base bx bx-chevron-left"></i>
+            </a>
+          </div>
+
+          <div class="menu-inner-shadow"></div>
+
+          <ul class="menu-inner py-1">
+            <!-- Dashboards -->
+            <!-- <li class="menu-header small text-uppercase">
+              <span class="menu-header-text">Apps &amp; Pages</span>
+            </li> -->
+            <li class="menu-item active">
+              <a href="javascript:void(0);" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-home-smile"></i>
+                <div class="text-truncate">HOME</div>
+                <!-- <span class="badge rounded-pill bg-danger ms-auto">5</span> -->
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-cube-alt"></i>
+                <div class="text-truncate">센터관리</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="pages-misc-error.html" class="menu-link">
+                    <label class="list-group-item w-100">
+                      <div class="text-truncate w-100">
+                        센터관리
+                        <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
+                      </div>
+                    </label>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!-- Pages -->
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                <div class="text-truncate">배송접수</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="pages-account-settings-account.html" class="menu-link">
+                    <label class="list-group-item w-100">
+                      <div class="text-truncate">
+                        배송등록
+                        <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
+                      </div>
+                    </label>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="pages-account-settings-notifications.html" class="menu-link">
+                    <label class="list-group-item w-100">
+                      <div class="text-truncate">
+                        패킹리스트
+                        <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
+                      </div>
+                    </label>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-layout"></i>
+                <div class="text-truncate">발송내역</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="auth-login-basic.html" class="menu-link" target="_blank">
+                    <label class="list-group-item w-100">
+                      <div class="text-truncate">
+                        발송내역
+                        <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
+                      </div>
+                    </label>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-cube-alt"></i>
+                <div class="text-truncate">상품관리</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="pages-misc-error.html" class="menu-link">
+                    <label class="list-group-item w-100">
+                      <div class="text-truncate">
+                        상품관리
+                        <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
+                      </div>
+                    </label>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="pages-misc-error.html" class="menu-link">
+                    <div class="text-truncate"></div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-grid"></i>
+                <div class="text-truncate">MyPage</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="pages-misc-error.html" class="menu-link">
+                    <label class="list-group-item w-100">
+                      <div class="text-truncate">
+                        MyPage
+                        <input class="form-check-input me-3" style="float: right" type="checkbox" value="" />
+                      </div>
+                    </label>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </aside>
+
+        <div class="menu-mobile-toggler d-xl-none rounded-1">
+          <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large text-bg-secondary p-2 rounded-1">
+            <i class="bx bx-menu icon-base"></i>
+            <i class="bx bx-chevron-right icon-base"></i>
+          </a>
+        </div>
+        <!-- / Menu -->
+
+        <!-- Layout container -->
+        <div class="layout-page">
+          <!-- Navbar -->
+
+          <nav
+            class="layout-navbar container-fluid navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+            id="layout-navbar">
+            <div class="layout-menu-toggle navbar-nav align-items-xl-center me-4 me-xl-0 d-xl-none">
+              <a class="nav-item nav-link px-0 me-xl-6" href="javascript:void(0)">
+                <i class="bx bx-menu bx-md"></i>
+              </a>
+            </div>
+
+            <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+              <ul class="navbar-nav flex-row align-items-center ms-auto">
+                <!-- Place this tag where you want the button to render. -->
+                <!-- User -->
+                <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                  <a
+                    class="nav-link dropdown-toggle hide-arrow p-0"
+                    href="javascript:void(0);"
+                    data-bs-toggle="dropdown">
+                    홍길동(TS14215)
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <div class="d-flex">
+                          <div class="flex-shrink-0 me-3"></div>
+                          <div class="flex-grow-1">
+                            <h6 class="mb-0">홍길동</h6>
+                            <small class="text-muted">TS14215</small>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider my-1"></div>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <i class="bx bx-user bx-md me-3"></i><span>내 프로필</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"> <i class="bx bx-cog bx-md me-3"></i><span>설정</span> </a>
+                    </li>
+                    <!-- <li>
+                      <a class="dropdown-item" href="#">
+                        <span class="d-flex align-items-center align-middle">
+                          <i class="flex-shrink-0 bx bx-credit-card bx-md me-3"></i
+                          ><span class="flex-grow-1 align-middle">Billing Plan</span>
+                          <span class="flex-shrink-0 badge rounded-pill bg-danger">4</span>
+                        </span>
+                      </a>
+                    </li> -->
+                    <li>
+                      <div class="dropdown-divider my-1"></div>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="javascript:void(0);">
+                        <i class="bx bx-power-off bx-md me-3"></i><span>로그아웃</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <span class="d-none d-sm-inline-block" style="margin-left: 1rem; color: gray">|</span>
+                <li class="d-none d-sm-inline-block nav-item">
+                  <a href="javascript:void(0)" class="btn btn-sm">
+                    <i class="bx bx-log-out-circle me-1"></i>로그아웃
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <!-- / Navbar -->
+
+          <!-- Content wrapper -->
+          <div class="content-wrapper">
+            <!-- Content -->
+
+            <div class="container-fluid navbar-expand-xl flex-grow-1 container-p-y">
+              <div class="row">
+                <div class="col-12 col-sm-3">
+                  <div class="card" style="background: none; box-shadow: none">
+                    <h4 class="card-header fw-bold pt-0 pb-4 p-0">배송등록</h4>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-9 d-flex text-end-center justify-content-end">
+                  <div>
+                    <button type="button" class="btn btn-sm btn-outline-dark me-1">
+                      배송등록<span class="ms-2 pb-1">x</span>
+                    </button>
+                  </div>
+                  <div>
+                    <button type="button" class="btn btn-sm btn-outline-dark">
+                      패킹리스트<span class="ms-2 pb-1">x</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <h6 class="mt-4"></h6>
+                  <div class="card mb-6" style="background: none; box-shadow: none">
+                    <div class="card-header p-0 nav-align-top" style="background: none; box-shadow: none">
+                      <ul class="nav nav-tabs" role="tablist" style="background: none; box-shadow: none">
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link active"
+                            data-bs-toggle="tab"
+                            data-bs-target="#form-tabs-personal"
+                            role="tab"
+                            aria-selected="true">
+                            수기 등록
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            data-bs-toggle="tab"
+                            data-bs-target="#form-tabs-account"
+                            role="tab"
+                            aria-selected="false"
+                            tabindex="-1">
+                            자동 등록
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            data-bs-toggle="tab"
+                            data-bs-target="#form-tabs-social"
+                            role="tab"
+                            aria-selected="false"
+                            tabindex="-1">
+                            메뉴얼
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="tab-content mt-2 p-2 bx-border-radius">
+                      <div class="tab-pane fade active show" id="form-tabs-personal" role="tabpanel">
+                        <form>
+                          <div class="row" style="background: white; border-radius: 0.375rem">
+                            <div class="col-8 col-md-4 col-lg-3 col-xl-2 py-3">
+                              <div class="position-relative">
+                                <select
+                                  id="select2Basic"
+                                  class="select2 form-select select2-hidden-accessible"
+                                  data-allow-clear="true"
+                                  data-select2-id="select2Basic"
+                                  tabindex="-1"
+                                  aria-hidden="true">
+                                  <option value="AK" data-select2-id="2">국가 선택</option>
+                                  <option value="HI">Hawaii</option>
+                                  <option value="CA">California</option>
+                                  <option value="NV">Nevada</option>
+                                  <option value="OR">Oregon</option>
+                                  <option value="WA">Washington</option>
+                                  <option value="AZ">Arizona</option></select
+                                ><span
+                                  class="select2 select2-container select2-container--default"
+                                  dir="ltr"
+                                  data-select2-id="1"
+                                  style="width: 560.8px"
+                                  ><span class="selection"
+                                    ><span
+                                      class="select2-selection select2-selection--single"
+                                      role="combobox"
+                                      aria-haspopup="true"
+                                      aria-expanded="false"
+                                      tabindex="0"
+                                      aria-disabled="false"
+                                      aria-labelledby="select2-select2Basic-container"
+                                      ><span class="select2-selection__arrow" role="presentation"
+                                        ><b role="presentation"></b></span></span></span
+                                  ><span class="dropdown-wrapper" aria-hidden="true"></span
+                                ></span>
+                              </div>
+                            </div>
+                            <div class="col-4 col-md-2 col-lg-1 col-xl-1 py-3">
+                              <a
+                                class=""
+                                href="/"
+                                style="text-decoration: underline; vertical-align: bottom; line-height: 2.3rem"
+                                >Sample</a
+                              >
+                            </div>
+                            <div class="col-8 col-sm-9 col-lg-4 col-xl-3 py-3"><input class="form-control" type="file" /></div>
+                            <div class="col-auto col py-3 text-end" style="text-align: right">
+                              <button type="submit" class="btn btn-primary">등록</button>
+                            </div>
+                          </div>
+                        </form>
+                        <div class="row">
+                          <div class="col-12">
+                            <div class="card" style="background: none; box-shadow: none">
+                              <div class="card-datatable dataTable_select text-nowrap">
+                                <div id="DataTables_Table_3_wrapper" class="dt-container dt-bootstrap5 dt-empty-footer">
+                                  <div class="row">
+                                    <div class="col-12 col-md-2 d-md-flex align-items-center dt-layout-start col-md-auto me-auto text-start">
+                                      <div class="dt-length mb-2 ms-2 ms-md-0 text-start">검색 건수: <span class="fw-bold">3건</span></div>
+                                    </div>
+                                    <div class="col-12 col-md-10 col-autoalign-items-center dt-layout-end col-md-auto ms-auto mt-0 text-start text-md-end">
+                                      <div class="dt-search d-inline-block mb-2 mt-2 mt-md-2">
+                                        <input
+                                          type="search"
+                                          class="form-control"
+                                          id="dt-search-3"
+                                          placeholder="검색어를 입력해주세요"
+                                          aria-controls="DataTables_Table_3" />
+                                      </div>
+                                      <div class="d-block d-sm-inline-block ms-2 ms-sm-0 mb-2 mb-sm-0">
+                                        <button class="btn btn-outline-primary">검색</button>
+                                        <button class="btn btn-outline-danger">삭제</button>
+                                        <button class="btn btn-outline-success">다운로드</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="dt-layout-table mt-0">
+                                    <div
+                                      class="d-md-flex align-items-center col-12 dt-layout-full col-md"
+                                      style="overflow: scroll">
+                                      <table
+                                        class="dt-select-table table table-bordered table-responsive dataTable"
+                                        id="DataTables_Table_3"
+                                        aria-describedby="DataTables_Table_3_info"
+                                        style="width: 100%; background: white">
+                                        <colgroup>
+                                          <col data-dt-column="0" style="width: 66px" />
+                                          <col data-dt-column="1" style="width: 198.188px" />
+                                          <col data-dt-column="2" style="width: 271.797px" />
+                                          <col data-dt-column="3" style="width: 274.125px" />
+                                          <col data-dt-column="4" style="width: 209.031px" />
+                                          <col data-dt-column="5" style="width: 117.359px" />
+                                          <col data-dt-column="6" style="width: 112.578px" />
+                                          <col data-dt-column="7" style="width: 135.734px" />
+                                          <col data-dt-column="8" style="width: 209.031px" />
+                                          <col data-dt-column="9" style="width: 117.359px" />
+                                          <col data-dt-column="10" style="width: 112.578px" />
+                                          <col data-dt-column="11" style="width: 135.734px" />
+                                          <col data-dt-column="12" style="width: 135.734px" />
+                                        </colgroup>
+                                        <thead>
+                                          <tr>
+                                            <th
+                                              data-dt-column="0"
+                                              rowspan="1"
+                                              colspan="1"
+                                              class="dt-select dt-orderable-none"
+                                              aria-label="">
+                                              <span class="dt-column-title"></span><span class="dt-column-order"></span
+                                              ><input
+                                                class="form-check-input"
+                                                type="checkbox" id="table-hands-checkbox-all"
+                                                aria-label="Select all rows" />
+                                            </th>
+                                            <th
+                                              data-dt-column="1"
+                                              rowspan="1"
+                                              colspan="1"
+                                              class="dt-orderable-asc dt-orderable-desc dt-ordering-desc"
+                                              aria-sort="descending"
+                                              aria-label="Name: Activate to remove sorting"
+                                              tabindex="0">
+                                              <span class="dt-column-title" role="button">No.</span
+                                              ><span class="dt-column-order"></span>
+                                            </th>
+                                            <th
+                                              data-dt-column="2"
+                                              rowspan="1"
+                                              colspan="1"
+                                              class="dt-orderable-asc dt-orderable-desc"
+                                              aria-label="Position: Activate to sort"
+                                              tabindex="0">
+                                              <span class="dt-column-title" role="button">장바구니 번호</span
+                                              ><span class="dt-column-order"></span>
+                                            </th>
+                                            <th
+                                              data-dt-column="3"
+                                              rowspan="1"
+                                              colspan="1"
+                                              class="dt-orderable-asc dt-orderable-desc"
+                                              aria-label="Email: Activate to sort"
+                                              tabindex="0">
+                                              <span class="dt-column-title" role="button">패킹번호</span
+                                              ><span class="dt-column-order"></span>
+                                            </th>
+                                            <th
+                                              data-dt-column="4"
+                                              rowspan="1"
+                                              colspan="1"
+                                              class="dt-orderable-asc dt-orderable-desc"
+                                              aria-label="City: Activate to sort"
+                                              tabindex="0">
+                                              <span class="dt-column-title" role="button">주문 등록일</span
+                                              ><span class="dt-column-order"></span>
+                                            </th>
+                                            <th
+                                              data-dt-column="5"
+                                              rowspan="1"
+                                              colspan="1"
+                                              class="dt-orderable-asc dt-orderable-desc"
+                                              aria-label="Date: Activate to sort"
+                                              tabindex="0">
+                                              <span class="dt-column-title" role="button">상품명</span
+                                              ><span class="dt-column-order"></span>
+                                            </th>
+                                            <th
+                                              data-dt-column="6"
+                                              rowspan="1"
+                                              colspan="1"
+                                              class="dt-orderable-asc dt-orderable-desc dt-type-numeric"
+                                              aria-label="Salary: Activate to sort"
+                                              tabindex="0">
+                                              <span class="dt-column-title" role="button">상품명(KR)</span
+                                              ><span class="dt-column-order"></span>
+                                            </th>
+                                            <th
+                                              data-dt-column="7"
+                                              rowspan="1"
+                                              colspan="1"
+                                              class="dt-orderable-asc dt-orderable-desc"
+                                              aria-label="Status: Activate to sort"
+                                              tabindex="0">
+                                              <span class="dt-column-title" role="button">옵션코드</span
+                                              ><span class="dt-column-order"></span>
+                                            </th>
+                                            <th
+                                              data-dt-column="8"
+                                              rowspan="1"
+                                              colspan="1"
+                                              class="dt-orderable-asc dt-orderable-desc"
+                                              aria-label="Status: Activate to sort"
+                                              tabindex="0">
+                                              <span class="dt-column-title" role="button">옵션정보</span
+                                              ><span class="dt-column-order"></span>
+                                            </th>
+                                            <th
+                                              data-dt-column="9"
+                                              rowspan="1"
+                                              colspan="1"
+                                              class="dt-orderable-asc dt-orderable-desc"
+                                              aria-label="Status: Activate to sort"
+                                              tabindex="0">
+                                              <span class="dt-column-title" role="button">통화</span
+                                              ><span class="dt-column-order"></span>
+                                            </th>
+                                            <th
+                                              data-dt-column="10"
+                                              rowspan="1"
+                                              colspan="1"
+                                              class="dt-orderable-asc dt-orderable-desc"
+                                              aria-label="Status: Activate to sort"
+                                              tabindex="0">
+                                              <span class="dt-column-title" role="button">수량</span
+                                              ><span class="dt-column-order"></span>
+                                            </th>
+                                            <th
+                                              data-dt-column="11"
+                                              rowspan="1"
+                                              colspan="1"
+                                              class="dt-orderable-asc dt-orderable-desc"
+                                              aria-label="Status: Activate to sort"
+                                              tabindex="0">
+                                              <span class="dt-column-title" role="button">총판매가</span
+                                              ><span class="dt-column-order"></span>
+                                            </th>
+                                            <th
+                                              data-dt-column="12"
+                                              rowspan="1"
+                                              colspan="1"
+                                              class="dt-orderable-asc dt-orderable-desc"
+                                              aria-label="Status: Activate to sort"
+                                              tabindex="0">
+                                              <span class="dt-column-title" role="button">상품코드</span
+                                              ><span class="dt-column-order"></span>
+                                            </th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr class="selected">
+                                            <td class="dt-select">
+                                              <input aria-label="Select row" class="form-check-input" type="checkbox" />
+                                            </td>
+                                            <td class="sorting_1">2022-03-07</td>
+                                            <td>03월</td>
+                                            <td>TR</td>
+                                            <td>스쿠트 항공 점퍼</td>
+                                            <td>업로드</td>
+                                            <td class="dt-type-numeric">102</td>
+                                            <td>KRW</td>
+                                            <td>1,021,023</td>
+                                            <td>1,000,000</td>
+                                            <td>이혜영</td>
+                                            <td>TR_20230307</td>
+                                            <td>TR_20230307</td>
+                                          </tr>
+                                          <tr class="selected">
+                                            <td class="dt-select">
+                                              <input aria-label="Select row" class="form-check-input" type="checkbox" />
+                                            </td>
+                                            <td class="sorting_1">2022-03-07</td>
+                                            <td>03월</td>
+                                            <td>TR</td>
+                                            <td>스쿠트 항공 점퍼</td>
+                                            <td>업로드</td>
+                                            <td class="dt-type-numeric">102</td>
+                                            <td>KRW</td>
+                                            <td>1,021,023</td>
+                                            <td>1,000,000</td>
+                                            <td>이혜영</td>
+                                            <td>TR_20230307</td>
+                                            <td>TR_20230307</td>
+                                          </tr>
+                                          <tr class="selected">
+                                            <td class="dt-select">
+                                              <input aria-label="Select row" class="form-check-input" type="checkbox" />
+                                            </td>
+                                            <td class="sorting_1">2022-03-07</td>
+                                            <td>03월</td>
+                                            <td>TR</td>
+                                            <td>스쿠트 항공 점퍼</td>
+                                            <td>업로드</td>
+                                            <td class="dt-type-numeric">102</td>
+                                            <td>KRW</td>
+                                            <td>1,021,023</td>
+                                            <td>1,000,000</td>
+                                            <td>이혜영</td>
+                                            <td>TR_20230307</td>
+                                            <td>TR_20230307</td>
+                                          </tr>
+                                        </tbody>
+                                        <tfoot></tfoot>
+                                      </table>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="d-md-flex align-items-center mt-1">
+                                      <div class="dt-paging mt-3">
+                                        <nav aria-label="pagination">
+                                          <ul class="pagination">
+                                            <li class="dt-paging-button page-item disabled">
+                                              <button
+                                                class="page-link previous"
+                                                role="link"
+                                                type="button"
+                                                aria-controls="DataTables_Table_3"
+                                                aria-disabled="true"
+                                                aria-label="Previous"
+                                                data-dt-idx="previous"
+                                                tabindex="-1">
+                                                <i class="icon-base bx bx-chevron-left scaleX-n1-rtl icon-sm"></i>
+                                              </button>
+                                            </li>
+                                            <li class="dt-paging-button page-item active">
+                                              <button
+                                                class="page-link"
+                                                role="link"
+                                                type="button"
+                                                aria-controls="DataTables_Table_3"
+                                                aria-current="page"
+                                                data-dt-idx="0">
+                                                1
+                                              </button>
+                                            </li>
+                                            <li class="dt-paging-button page-item">
+                                              <button
+                                                class="page-link"
+                                                role="link"
+                                                type="button"
+                                                aria-controls="DataTables_Table_3"
+                                                data-dt-idx="1">
+                                                2
+                                              </button>
+                                            </li>
+                                            <li class="dt-paging-button page-item">
+                                              <button
+                                                class="page-link"
+                                                role="link"
+                                                type="button"
+                                                aria-controls="DataTables_Table_3"
+                                                data-dt-idx="2">
+                                                3
+                                              </button>
+                                            </li>
+                                            <li class="dt-paging-button page-item">
+                                              <button
+                                                class="page-link"
+                                                role="link"
+                                                type="button"
+                                                aria-controls="DataTables_Table_3"
+                                                data-dt-idx="3">
+                                                4
+                                              </button>
+                                            </li>
+                                            <li class="dt-paging-button page-item">
+                                              <button
+                                                class="page-link"
+                                                role="link"
+                                                type="button"
+                                                aria-controls="DataTables_Table_3"
+                                                data-dt-idx="4">
+                                                5
+                                              </button>
+                                            </li>
+                                            <li class="dt-paging-button page-item disabled">
+                                              <button
+                                                class="page-link ellipsis"
+                                                role="link"
+                                                type="button"
+                                                aria-controls="DataTables_Table_3"
+                                                aria-disabled="true"
+                                                data-dt-idx="ellipsis"
+                                                tabindex="-1">
+                                                …
+                                              </button>
+                                            </li>
+                                            <li class="dt-paging-button page-item">
+                                              <button
+                                                class="page-link"
+                                                role="link"
+                                                type="button"
+                                                aria-controls="DataTables_Table_3"
+                                                data-dt-idx="9">
+                                                10
+                                              </button>
+                                            </li>
+                                            <li class="dt-paging-button page-item">
+                                              <button
+                                                class="page-link next"
+                                                role="link"
+                                                type="button"
+                                                aria-controls="DataTables_Table_3"
+                                                aria-label="Next"
+                                                data-dt-idx="next">
+                                                <i class="icon-base bx bx-chevron-right scaleX-n1-rtl icon-sm"></i>
+                                              </button>
+                                            </li>
+                                          </ul>
+                                        </nav>
+                                      </div>
+                                      <div>
+                                        <label for="dt-length-2" class="ms-4 mt-3 d-none d-md-inline-block"
+                                          ><select
+                                            name="DataTables_Table_3_length"
+                                            aria-controls="DataTables_Table_3"
+                                            class="form-select"
+                                            id="dt-length-2">
+                                            <option value="10">10</option>
+                                            <option value="25">25</option>
+                                            <option value="50">50</option>
+                                            <option value="100">100</option>
+                                          </select></label
+                                        >
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="form-tabs-account" role="tabpanel">
+                        <form>
+                          <div class="row" style="background: white; border-radius: 0.375rem">
+                            <div class="col-2 py-3">
+                              <div class="position-relative">
+                                <select
+                                  id="select2Basic"
+                                  class="select2 form-select select2-hidden-accessible"
+                                  data-allow-clear="true"
+                                  data-select2-id="select2Basic"
+                                  tabindex="-1"
+                                  aria-hidden="true">
+                                  <option value="AK" data-select2-id="2">Alaska</option>
+                                  <option value="HI">Hawaii</option>
+                                  <option value="CA">California</option>
+                                  <option value="NV">Nevada</option>
+                                  <option value="OR">Oregon</option>
+                                  <option value="WA">Washington</option>
+                                  <option value="AZ">Arizona</option></select
+                                ><span
+                                  class="select2 select2-container select2-container--default"
+                                  dir="ltr"
+                                  data-select2-id="1"
+                                  style="width: 560.8px"
+                                  ><span class="selection"
+                                    ><span
+                                      class="select2-selection select2-selection--single"
+                                      role="combobox"
+                                      aria-haspopup="true"
+                                      aria-expanded="false"
+                                      tabindex="0"
+                                      aria-disabled="false"
+                                      aria-labelledby="select2-select2Basic-container"
+                                      ><span class="select2-selection__arrow" role="presentation"
+                                        ><b role="presentation"></b></span></span></span
+                                  ><span class="dropdown-wrapper" aria-hidden="true"></span
+                                ></span>
+                              </div>
+                              <div><span class="mx-4" style="display: none">|</span></div>
+                            </div>
+                            <div class="col-2 py-3">
+                              <div class="position-relative">
+                                <select
+                                  id="formtabs-country"
+                                  class="select2 form-select select2-hidden-accessible"
+                                  data-allow-clear="true"
+                                  data-select2-id="formtabs-country"
+                                  tabindex="-1"
+                                  aria-hidden="true">
+                                  <option value="" disabled selected>날짜 유형</option>
+                                  <option value="Australia">배송현황</option>
+                                  <option value="Bangladesh">배송 대기중</option>
+                                  <option value="Belarus">ALL</option></select
+                                ><span
+                                  class="select2 select2-container select2-container--default"
+                                  dir="ltr"
+                                  data-select2-id="10"
+                                  style="width: 560.8px"
+                                  ><span class="selection"
+                                    ><span
+                                      class="select2-selection select2-selection--single"
+                                      role="combobox"
+                                      aria-haspopup="true"
+                                      aria-expanded="false"
+                                      tabindex="0"
+                                      aria-disabled="false"
+                                      aria-labelledby="select2-formtabs-country-container"
+                                      ><span
+                                        class="select2-selection__rendered"
+                                        id="select2-formtabs-country-container"
+                                        role="textbox"
+                                        aria-readonly="true"></span
+                                      ><span class="select2-selection__arrow" role="presentation"
+                                        ><b role="presentation"></b></span></span></span
+                                  ><span class="dropdown-wrapper" aria-hidden="true"></span
+                                ></span>
+                              </div>
+                            </div>
+                            <div class="col-2 py-3">
+                              <input
+                                type="date"
+                                id="formtabs-startdate"
+                                class="form-control"
+                                placeholder="시작일"
+                                data-placeholder="시작일"
+                                aria-required="true" />
+                            </div>
+                            <div class="col-2 py-3">
+                              <input
+                                type="date"
+                                id="formtabs-enddate"
+                                class="form-control"
+                                placeholder="종료일"
+                                aria-label="" />
+                            </div>
+                            <div class="col-2 py-3">
+                              <a
+                                href="/"
+                                class="text-danger fw-bold"
+                                style="text-decoration: underline; vertical-align: bottom; line-height: 2.3rem"
+                                >! <span id="shop-name"></span>주문수집 API 이용안내</a
+                              >
+                            </div>
+                            <div class="col-2 py-3" style="text-align: right">
+                              <button type="submit" class="btn btn-primary">등록주문 수집</button>
+                            </div>
+                          </div>
+                        </form>
+                        <div class="row">
+                          <div class="col-12">
+                            <div class="card" style="background: none; box-shadow: none">
+                              <!-- <h5 class="card-header pb-0 text-md-start text-center">Select</h5> -->
+                              <div class="card-datatable dataTable_select text-nowrap">
+                                <div id="DataTables_Table_3_wrapper" class="dt-container dt-bootstrap5 dt-empty-footer">
+                                  <div class="row">
+                                    <div class="d-md-flex align-items-center dt-layout-start col-md-auto me-auto">
+                                      <div class="dt-length mb-2">검색 건수: <span class="fw-bold">3건</span></div>
+                                    </div>
+                                    <div class="col-autoalign-items-center dt-layout-end col-md-auto ms-auto mt-0">
+                                      <div class="dt-search d-inline-block mb-2">
+                                        <input
+                                          type="search"
+                                          class="form-control"
+                                          id="dt-search-3"
+                                          placeholder="검색어를 입력해주세요"
+                                          aria-controls="DataTables_Table_3" />
+                                      </div>
+                                      <div class="d-inline-block">
+                                        <button class="btn btn-outline-primary">검색</button>
+                                        <button class="btn btn-outline-danger">삭제</button>
+                                        <button class="btn btn-outline-success">다운로드</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="dt-layout-table mt-0">
+                                    <div
+                                      class="d-md-flex align-items-center col-12 dt-layout-full col-md"
+                                      style="overflow: scroll">
+                                      <table
+                                        class="dt-select-table table table-bordered table-responsive dataTable"
+                                        id="DataTables_Table_3"
+                                        aria-describedby="DataTables_Table_3_info"
+                                        style="width: 100%; background: white">
+                                        <colgroup>
+                                          <col data-dt-column="0" style="width: 66px" />
+                                          <col data-dt-column="1" style="width: 198.188px" />
+                                          <col data-dt-column="2" style="width: 271.797px" />
+                                          <col data-dt-column="3" style="width: 274.125px" />
+                                          <col data-dt-column="4" style="width: 209.031px" />
+                                          <col data-dt-column="5" style="width: 117.359px" />
+                                          <col data-dt-column="6" style="width: 112.578px" />
+                                          <col data-dt-column="7" style="width: 135.734px" />
+                                          <col data-dt-column="8" style="width: 209.031px" />
+                                          <col data-dt-column="9" style="width: 117.359px" />
+                                          <col data-dt-column="10" style="width: 112.578px" />
+                                          <col data-dt-column="11" style="width: 135.734px" />
+                                          <col data-dt-column="12" style="width: 135.734px" />
+                                        </colgroup>
+                                        <thead>
+                                          <tr>
+                                            <th
+                                              data-dt-column="0"
+                                              rowspan="1"
+                                              colspan="1"
+                                              class="dt-select dt-orderable-none"
+                                              aria-label="">
+                                              <span class="dt-column-title"></span><span class="dt-column-order"></span
+                                              ><input
+                                                class="form-check-input"
+                                                type="checkbox"
+                                                aria-label="Select all rows" />
+                                            </th>
+                                            <th
+                                              data-dt-column="1"
+                                              rowspan="1"
+                                              colspan="1"
+                                              class="dt-orderable-asc dt-orderable-desc dt-ordering-desc"
+                                              aria-sort="descending"
+                                              aria-label="Name: Activate to remove sorting"
+                                              tabindex="0">
+                                              <span class="dt-column-title" role="button">No.</span
+                                              ><span class="dt-column-order"></span>
+                                            </th>
+                                            <th
+                                              data-dt-column="2"
+                                              rowspan="1"
+                                              colspan="1"
+                                              class="dt-orderable-asc dt-orderable-desc"
+                                              aria-label="Position: Activate to sort"
+                                              tabindex="0">
+                                              <span class="dt-column-title" role="button">장바구니 번호</span
+                                              ><span class="dt-column-order"></span>
+                                            </th>
+                                            <th
+                                              data-dt-column="3"
+                                              rowspan="1"
+                                              colspan="1"
+                                              class="dt-orderable-asc dt-orderable-desc"
+                                              aria-label="Email: Activate to sort"
+                                              tabindex="0">
+                                              <span class="dt-column-title" role="button">패킹번호</span
+                                              ><span class="dt-column-order"></span>
+                                            </th>
+                                            <th
+                                              data-dt-column="4"
+                                              rowspan="1"
+                                              colspan="1"
+                                              class="dt-orderable-asc dt-orderable-desc"
+                                              aria-label="City: Activate to sort"
+                                              tabindex="0">
+                                              <span class="dt-column-title" role="button">주문 등록일</span
+                                              ><span class="dt-column-order"></span>
+                                            </th>
+                                            <th
+                                              data-dt-column="5"
+                                              rowspan="1"
+                                              colspan="1"
+                                              class="dt-orderable-asc dt-orderable-desc"
+                                              aria-label="Date: Activate to sort"
+                                              tabindex="0">
+                                              <span class="dt-column-title" role="button">상품명</span
+                                              ><span class="dt-column-order"></span>
+                                            </th>
+                                            <th
+                                              data-dt-column="6"
+                                              rowspan="1"
+                                              colspan="1"
+                                              class="dt-orderable-asc dt-orderable-desc dt-type-numeric"
+                                              aria-label="Salary: Activate to sort"
+                                              tabindex="0">
+                                              <span class="dt-column-title" role="button">상품명(KR)</span
+                                              ><span class="dt-column-order"></span>
+                                            </th>
+                                            <th
+                                              data-dt-column="7"
+                                              rowspan="1"
+                                              colspan="1"
+                                              class="dt-orderable-asc dt-orderable-desc"
+                                              aria-label="Status: Activate to sort"
+                                              tabindex="0">
+                                              <span class="dt-column-title" role="button">옵션코드</span
+                                              ><span class="dt-column-order"></span>
+                                            </th>
+                                            <th
+                                              data-dt-column="8"
+                                              rowspan="1"
+                                              colspan="1"
+                                              class="dt-orderable-asc dt-orderable-desc"
+                                              aria-label="Status: Activate to sort"
+                                              tabindex="0">
+                                              <span class="dt-column-title" role="button">옵션정보</span
+                                              ><span class="dt-column-order"></span>
+                                            </th>
+                                            <th
+                                              data-dt-column="9"
+                                              rowspan="1"
+                                              colspan="1"
+                                              class="dt-orderable-asc dt-orderable-desc"
+                                              aria-label="Status: Activate to sort"
+                                              tabindex="0">
+                                              <span class="dt-column-title" role="button">통화</span
+                                              ><span class="dt-column-order"></span>
+                                            </th>
+                                            <th
+                                              data-dt-column="10"
+                                              rowspan="1"
+                                              colspan="1"
+                                              class="dt-orderable-asc dt-orderable-desc"
+                                              aria-label="Status: Activate to sort"
+                                              tabindex="0">
+                                              <span class="dt-column-title" role="button">수량</span
+                                              ><span class="dt-column-order"></span>
+                                            </th>
+                                            <th
+                                              data-dt-column="11"
+                                              rowspan="1"
+                                              colspan="1"
+                                              class="dt-orderable-asc dt-orderable-desc"
+                                              aria-label="Status: Activate to sort"
+                                              tabindex="0">
+                                              <span class="dt-column-title" role="button">총판매가</span
+                                              ><span class="dt-column-order"></span>
+                                            </th>
+                                            <th
+                                              data-dt-column="12"
+                                              rowspan="1"
+                                              colspan="1"
+                                              class="dt-orderable-asc dt-orderable-desc"
+                                              aria-label="Status: Activate to sort"
+                                              tabindex="0">
+                                              <span class="dt-column-title" role="button">상품코드</span
+                                              ><span class="dt-column-order"></span>
+                                            </th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr class="selected">
+                                            <td class="dt-select">
+                                              <input aria-label="Select row" class="form-check-input" type="checkbox" />
+                                            </td>
+                                            <td class="sorting_1">2022-03-07</td>
+                                            <td>03월</td>
+                                            <td>TR</td>
+                                            <td>스쿠트 항공 점퍼</td>
+                                            <td>업로드</td>
+                                            <td class="dt-type-numeric">102</td>
+                                            <td>KRW</td>
+                                            <td>1,021,023</td>
+                                            <td>1,000,000</td>
+                                            <td>이혜영</td>
+                                            <td>TR_20230307</td>
+                                            <td>TR_20230307</td>
+                                          </tr>
+                                          <tr class="selected">
+                                            <td class="dt-select">
+                                              <input aria-label="Select row" class="form-check-input" type="checkbox" />
+                                            </td>
+                                            <td class="sorting_1">2022-03-07</td>
+                                            <td>03월</td>
+                                            <td>TR</td>
+                                            <td>스쿠트 항공 점퍼</td>
+                                            <td>업로드</td>
+                                            <td class="dt-type-numeric">102</td>
+                                            <td>KRW</td>
+                                            <td>1,021,023</td>
+                                            <td>1,000,000</td>
+                                            <td>이혜영</td>
+                                            <td>TR_20230307</td>
+                                            <td>TR_20230307</td>
+                                          </tr>
+                                          <tr class="selected">
+                                            <td class="dt-select">
+                                              <input aria-label="Select row" class="form-check-input" type="checkbox" />
+                                            </td>
+                                            <td class="sorting_1">2022-03-07</td>
+                                            <td>03월</td>
+                                            <td>TR</td>
+                                            <td>스쿠트 항공 점퍼</td>
+                                            <td>업로드</td>
+                                            <td class="dt-type-numeric">102</td>
+                                            <td>KRW</td>
+                                            <td>1,021,023</td>
+                                            <td>1,000,000</td>
+                                            <td>이혜영</td>
+                                            <td>TR_20230307</td>
+                                            <td>TR_20230307</td>
+                                          </tr>
+                                        </tbody>
+                                        <tfoot></tfoot>
+                                      </table>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="d-md-flex align-items-center mt-1">
+                                      <div class="dt-paging mt-3">
+                                        <nav aria-label="pagination">
+                                          <ul class="pagination">
+                                            <li class="dt-paging-button page-item disabled">
+                                              <button
+                                                class="page-link previous"
+                                                role="link"
+                                                type="button"
+                                                aria-controls="DataTables_Table_3"
+                                                aria-disabled="true"
+                                                aria-label="Previous"
+                                                data-dt-idx="previous"
+                                                tabindex="-1">
+                                                <i class="icon-base bx bx-chevron-left scaleX-n1-rtl icon-sm"></i>
+                                              </button>
+                                            </li>
+                                            <li class="dt-paging-button page-item active">
+                                              <button
+                                                class="page-link"
+                                                role="link"
+                                                type="button"
+                                                aria-controls="DataTables_Table_3"
+                                                aria-current="page"
+                                                data-dt-idx="0">
+                                                1
+                                              </button>
+                                            </li>
+                                            <li class="dt-paging-button page-item">
+                                              <button
+                                                class="page-link"
+                                                role="link"
+                                                type="button"
+                                                aria-controls="DataTables_Table_3"
+                                                data-dt-idx="1">
+                                                2
+                                              </button>
+                                            </li>
+                                            <li class="dt-paging-button page-item">
+                                              <button
+                                                class="page-link"
+                                                role="link"
+                                                type="button"
+                                                aria-controls="DataTables_Table_3"
+                                                data-dt-idx="2">
+                                                3
+                                              </button>
+                                            </li>
+                                            <li class="dt-paging-button page-item">
+                                              <button
+                                                class="page-link"
+                                                role="link"
+                                                type="button"
+                                                aria-controls="DataTables_Table_3"
+                                                data-dt-idx="3">
+                                                4
+                                              </button>
+                                            </li>
+                                            <li class="dt-paging-button page-item">
+                                              <button
+                                                class="page-link"
+                                                role="link"
+                                                type="button"
+                                                aria-controls="DataTables_Table_3"
+                                                data-dt-idx="4">
+                                                5
+                                              </button>
+                                            </li>
+                                            <li class="dt-paging-button page-item disabled">
+                                              <button
+                                                class="page-link ellipsis"
+                                                role="link"
+                                                type="button"
+                                                aria-controls="DataTables_Table_3"
+                                                aria-disabled="true"
+                                                data-dt-idx="ellipsis"
+                                                tabindex="-1">
+                                                …
+                                              </button>
+                                            </li>
+                                            <li class="dt-paging-button page-item">
+                                              <button
+                                                class="page-link"
+                                                role="link"
+                                                type="button"
+                                                aria-controls="DataTables_Table_3"
+                                                data-dt-idx="9">
+                                                10
+                                              </button>
+                                            </li>
+                                            <li class="dt-paging-button page-item">
+                                              <button
+                                                class="page-link next"
+                                                role="link"
+                                                type="button"
+                                                aria-controls="DataTables_Table_3"
+                                                aria-label="Next"
+                                                data-dt-idx="next">
+                                                <i class="icon-base bx bx-chevron-right scaleX-n1-rtl icon-sm"></i>
+                                              </button>
+                                            </li>
+                                          </ul>
+                                        </nav>
+                                      </div>
+                                      <div>
+                                        <label for="dt-length-2" class="ms-4 mt-3"
+                                          ><select
+                                            name="DataTables_Table_3_length"
+                                            aria-controls="DataTables_Table_3"
+                                            class="form-select"
+                                            id="dt-length-2">
+                                            <option value="10">10</option>
+                                            <option value="25">25</option>
+                                            <option value="50">50</option>
+                                            <option value="100">100</option>
+                                          </select></label
+                                        >
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="form-tabs-social" role="tabpanel">
+                        <div class="row">
+                          <div class="col-12 col-lg-6 col-xxl-4 mt-3 ">
+                            <a href="https://exm.exmate.net/seller/api/list"><div class="card h-100" style="background-image: url('../../assets/img/customizer/banner-background.png');    background-repeat: no-repeat;
+                            background-size: cover;
+                            background-position: center;">
+                              <div class="card-body"><h2 class="text-white pt-4 mt-4 text-end fw-bold"><i class="icon-base bx bx-link icon-lg me-2 mb-2" style="font-size: 2.5rem !important;
+                                block-size: 2.5rem !important;
+                                inline-size: 2.5rem !important;
+                            "></i>배송 등록 방법</h2></div>
+                            </div></a></div>
+                            <div class="col-12 col-lg-6 col-xxl-4 mt-3 ">
+                                <div class="card">
+                                <div class="card-body">
+                                    <h6 class="fw-bold">[Qoo10 JP 주문수집 API 이용안내]</h6>
+                                    <div>
+                                    1.
+                                    <a href="https://exm.exmate.net/seller/api/list">Mypage > API 연동 메뉴에서 Qoo10 정보 설정</a
+                                    >
+                                    <br />
+                                    2. 오른쪽 화면에서 날짜설정후 [주문수집하기] 버튼 클릭 <br />
+                                    3. 하단에 리스트 선택후 [저장] 버튼 눌러서 최종 등록
+                                    </div>
+                                </div>
+                                
+                              </div>
+                            </div>
+                            <div class=" col-12 col-lg-6 col-xxl-4 mt-3">
+                                
+                                <div class="card">
+                                    <div class="card-body">
+                                <h6 class="fw-bold">[Rakuten 주문수집 API 이용안내]</h6>
+                                <div>
+                                    1.
+                                    <a href="https://exm.exmate.net/seller/api/list">
+                                    Mypage > API 연동 메뉴에서 Rakuten 정보 설정
+                                    </a>
+                                    <br />
+                                    2. 오른쪽 화면에서 날짜설정후 [주문수집하기] 버튼 클릭 <br />
+                                    3. 하단에 리스트 선택후 [저장] 버튼 눌러서 최종 등록
+                                </div>
+                                </div>
+                              
+                            </div>
+                            </div>
+                        </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- / Content -->
+
+            <!-- Footer -->
+            <footer class="content-footer footer bg-footer-theme" style="background: #d4ded6;    position: fixed;
+            bottom: 0;
+            width: 100%;">
+              <div class="container-fluid">
+                <div class="footer-container d-flex align-items-center py-4 flex-md-row flex-column">
+                  <div class="text-body w-100 text-center">
+                    Copyright © 2023
+                    <a href="https://exmate.net/" target="_blank" class="footer-link">eXmate.</a>
+                    All rights reserved
+                  </div>
+                </div>
+              </div>
+            </footer>
+            <!-- / Footer -->
+
+            <div class="content-backdrop fade"></div>
+          </div>
+          <!-- Content wrapper -->
+        </div>
+        <!-- / Layout page -->
+      </div>
+
+      <!-- Overlay -->
+      <div class="layout-overlay layout-menu-toggle"></div>
+
+      <!-- Drag Target Area To SlideIn Menu On Small Screens -->
+      <div class="drag-target"></div>
+    </div>
+    <!-- / Layout wrapper -->
+
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/theme.js  -->
+
+    <script src="../../assets/vendor/libs/jquery/jquery.js"></script>
+
+    <script src="../../assets/vendor/libs/popper/popper.js"></script>
+    <script src="../../assets/vendor/js/bootstrap.js"></script>
+    <script src="../../assets/vendor/libs/@algolia/autocomplete-js.js"></script>
+
+    <script src="../../assets/vendor/libs/pickr/pickr.js"></script>
+
+    <script src="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+    <script src="../../assets/vendor/libs/hammer/hammer.js"></script>
+    <script src="../../assets/vendor/libs/i18n/i18n.js"></script>
+    <script src="../../assets/vendor/js/menu.js"></script>
+
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+    <script src="../../assets/vendor/libs/apex-charts/apexcharts.js"></script>
+    <script src="../../assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
+    <!-- Main JS -->
+
+    <script src="../../assets/js/main.js"></script>
+
+    <!-- Page JS -->
+    <script src="../../assets/js/tables-datatables-extensions.js"></script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+파일 위치 html/vertical-menu-template
+
+배송등록 shipping-register.html
+패킹리스트 packing-list.html
+삭제목록 deleted-list.html
+일별 입고 현황 daily-inbound.html
+발송목록 shipment-list.html
+배송현황 shipping-status.html
+수출신고-제외 export-declaration.html
+해외배송 소포 수령중 international-parcel-receiving.html
+대쉬보드 dashboard.html
+공지사항 notice.html
+사은품 관리 gift.html
+반송 보관건 목록 returned-storage-list.html
+회수 retrieval.html
+내정보 profile.html
+API 연동 api-integration.html

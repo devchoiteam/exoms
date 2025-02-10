@@ -71,21 +71,20 @@ window.templateName = document.documentElement.getAttribute('data-template');
 
 if (typeof TemplateCustomizer !== 'undefined') {
   window.templateCustomizer = new TemplateCustomizer({
-    displayCustomizer: true, 
-    lang: 'en', // Set default language here
+    displayCustomizer: true,
     lang: localStorage.getItem('templateCustomizer-' + templateName + '--Lang') || 'en', // Set default language here
-    defaultPrimaryColor: '#2092EC',
-    defaultSkin: 0,
-    defaultTheme: 'light',
-    defaultSemiDark: false,
-    defaultContentLayout: 'wide',
-    defaultHeaderType: 'static',
-    defaultMenuCollapsed: true,
-    defaultNavbarType: 'static',
-    defaultTextDir: 'rtl',
-    defaultFooterFixed: false,
-    defaultShowDropdownOnHover: false,
-    controls: [ // 이거 나중에 열어야함
+    // defaultPrimaryColor: '#D11BB4',
+    // defaultSkin: 1,
+    // defaultTheme: 'system',
+    // defaultSemiDark: true,
+    // defaultContentLayout: 'wide',
+    // defaultHeaderType: 'static',
+    // defaultMenuCollapsed: true,
+    // defaultNavbarType: 'static',
+    // defaultTextDir: 'rtl',
+    // defaultFooterFixed: false,
+    // defaultShowDropdownOnHover: false,
+    controls: [
       'color',
       'theme',
       'skins',
