@@ -543,42 +543,36 @@ const Helpers = {
   // ---
   // Collapse / expand layout
   setCollapsed(collapsed = requiredParam('collapsed'), animate = true) {
-    const layoutMenu = this.getLayoutMenu()
-
-    if (!layoutMenu) return
-
-    this._unbindLayoutAnimationEndEvent()
-
-    if (animate && this._supportsTransitionEnd()) {
-      this._addClass('layout-transitioning')
-      if (collapsed) this._setMenuHoverState(false)
-
-      this._bindLayoutAnimationEndEvent(
-        () => {
-          // Collapse / Expand
-          this._setCollapsed(collapsed)
-        },
-        () => {
-          this._removeClass('layout-transitioning')
-          this._triggerWindowEvent('resize')
-          this._triggerEvent('toggle')
-          this._setMenuHoverState(false)
-        }
-      )
-    } else {
-      this._addClass('layout-no-transition')
-      if (collapsed) this._setMenuHoverState(false)
-
-      // Collapse / Expand
-      this._setCollapsed(collapsed)
-
-      setTimeout(() => {
-        this._removeClass('layout-no-transition')
-        this._triggerWindowEvent('resize')
-        this._triggerEvent('toggle')
-        this._setMenuHoverState(false)
-      }, 1)
-    }
+    // const layoutMenu = this.getLayoutMenu()
+    // if (!layoutMenu) return
+    // this._unbindLayoutAnimationEndEvent()
+    // if (animate && this._supportsTransitionEnd()) {
+    //   this._addClass('layout-transitioning')
+    //   if (collapsed) this._setMenuHoverState(false)
+    //   this._bindLayoutAnimationEndEvent(
+    //     () => {
+    //       // Collapse / Expand
+    //       this._setCollapsed(collapsed)
+    //     },
+    //     () => {
+    //       this._removeClass('layout-transitioning')
+    //       this._triggerWindowEvent('resize')
+    //       this._triggerEvent('toggle')
+    //       this._setMenuHoverState(false)
+    //     }
+    //   )
+    // } else {
+    //   this._addClass('layout-no-transition')
+    //   if (collapsed) this._setMenuHoverState(false)
+    //   // Collapse / Expand
+    //   this._setCollapsed(collapsed)
+    //   setTimeout(() => {
+    //     this._removeClass('layout-no-transition')
+    //     this._triggerWindowEvent('resize')
+    //     this._triggerEvent('toggle')
+    //     this._setMenuHoverState(false)
+    //   }, 1)
+    // }
   },
 
   // ---
@@ -590,19 +584,17 @@ const Helpers = {
   // ---
   // Set layout positioning
   setPosition(fixed = requiredParam('fixed'), offcanvas = requiredParam('offcanvas')) {
-    this._removeClass('layout-menu-offcanvas layout-menu-fixed layout-menu-fixed-offcanvas')
-
-    if (!fixed && offcanvas) {
-      this._addClass('layout-menu-offcanvas')
-    } else if (fixed && !offcanvas) {
-      this._addClass('layout-menu-fixed')
-      this._redrawLayoutMenu()
-    } else if (fixed && offcanvas) {
-      this._addClass('layout-menu-fixed-offcanvas')
-      this._redrawLayoutMenu()
-    }
-
-    this.update()
+    // this._removeClass('layout-menu-offcanvas layout-menu-fixed layout-menu-fixed-offcanvas')
+    // if (!fixed && offcanvas) {
+    //   this._addClass('layout-menu-offcanvas')
+    // } else if (fixed && !offcanvas) {
+    //   this._addClass('layout-menu-fixed')
+    //   this._redrawLayoutMenu()
+    // } else if (fixed && offcanvas) {
+    //   this._addClass('layout-menu-fixed-offcanvas')
+    //   this._redrawLayoutMenu()
+    // }
+    // this.update()
   },
 
   // Update light/dark image based on current style
@@ -668,121 +660,113 @@ const Helpers = {
   // * Setters
 
   setNavbarFixed(fixed = requiredParam('fixed')) {
-    this[fixed ? '_addClass' : '_removeClass']('layout-navbar-fixed')
-    this.update()
+    // this[fixed ? '_addClass' : '_removeClass']('layout-navbar-fixed')
+    // this.update()
   },
 
   setNavbar(type) {
-    if (type === 'sticky') {
-      this._addClass('layout-navbar-fixed')
-      this._removeClass('layout-navbar-hidden')
-    } else if (type === 'hidden') {
-      this._addClass('layout-navbar-hidden')
-      this._removeClass('layout-navbar-fixed')
-    } else {
-      this._removeClass('layout-navbar-hidden')
-      this._removeClass('layout-navbar-fixed')
-    }
-    this.update()
+    // if (type === 'sticky') {
+    //   this._addClass('layout-navbar-fixed')
+    //   this._removeClass('layout-navbar-hidden')
+    // } else if (type === 'hidden') {
+    //   this._addClass('layout-navbar-hidden')
+    //   this._removeClass('layout-navbar-fixed')
+    // } else {
+    //   this._removeClass('layout-navbar-hidden')
+    //   this._removeClass('layout-navbar-fixed')
+    // }
+    // this.update()
   },
 
   setFooterFixed(fixed = requiredParam('fixed')) {
-    this[fixed ? '_addClass' : '_removeClass']('layout-footer-fixed')
-    this.update()
+    // this[fixed ? '_addClass' : '_removeClass']('layout-footer-fixed')
+    // this.update()
   },
 
   // Add to Helpers object in helpers.js
 
   setColor(color, defaultColor) {
-    const r = parseInt(color.slice(1, 3), 16)
-    const g = parseInt(color.slice(3, 5), 16)
-    const b = parseInt(color.slice(5, 7), 16)
-
-    let styleSheet = document.getElementById('custom-css')
-
-    if (!styleSheet) {
-      styleSheet = document.createElement('style')
-      styleSheet.id = 'custom-css'
-      document.head.appendChild(styleSheet)
-    }
-
-    function calculateRatio(percentage) {
-      const numericValue = parseFloat(percentage)
-      const result = (100 - numericValue) / 100
-      return result
-    }
-
-    const yiq = (r * 299 + g * 587 + b * 114) / 1000
-    const ratio = getComputedStyle(document.documentElement).getPropertyValue('--bs-min-contrast-ratio').trim() * 100
-    const subtleRatio = getComputedStyle(document.documentElement)
-      .getPropertyValue('--bs-bg-label-tint-amount')
-      .trim('%')
-    const borderSubtleRatio = getComputedStyle(document.documentElement)
-      .getPropertyValue('--bs-border-subtle-amount')
-      .trim()
-
-    // Calculate contrast color based on YIQ and ratio
-    const contrastColor = yiq >= ratio ? '#000' : '#fff' // window.config.colors.black : window.config.colors.white
-
-    // Set CSS custom properties
-    if (defaultColor) {
-      styleSheet.innerHTML = `:root, [data-bs-theme=light], [data-bs-theme=dark] {
-    --bs-primary: ${color};
-    --bs-primary-rgb: ${r}, ${g}, ${b};
-    --bs-primary-bg-subtle: color-mix(in sRGB, ${window.config.colors.cardColor} ${subtleRatio}, ${color});
-    --bs-primary-border-subtle: rgba(${r}, ${g}, ${b}, ${calculateRatio(borderSubtleRatio)});
-    --bs-primary-contrast: ${contrastColor}
-  }`
-    }
+    //     const r = parseInt(color.slice(1, 3), 16)
+    //     const g = parseInt(color.slice(3, 5), 16)
+    //     const b = parseInt(color.slice(5, 7), 16)
+    //     let styleSheet = document.getElementById('custom-css')
+    //     if (!styleSheet) {
+    //       styleSheet = document.createElement('style')
+    //       styleSheet.id = 'custom-css'
+    //       document.head.appendChild(styleSheet)
+    //     }
+    //     function calculateRatio(percentage) {
+    //       const numericValue = parseFloat(percentage)
+    //       const result = (100 - numericValue) / 100
+    //       return result
+    //     }
+    //     const yiq = (r * 299 + g * 587 + b * 114) / 1000
+    //     const ratio = getComputedStyle(document.documentElement).getPropertyValue('--bs-min-contrast-ratio').trim() * 100
+    //     const subtleRatio = getComputedStyle(document.documentElement)
+    //       .getPropertyValue('--bs-bg-label-tint-amount')
+    //       .trim('%')
+    //     const borderSubtleRatio = getComputedStyle(document.documentElement)
+    //       .getPropertyValue('--bs-border-subtle-amount')
+    //       .trim()
+    //     // Calculate contrast color based on YIQ and ratio
+    //     const contrastColor = yiq >= ratio ? '#000' : '#fff' // window.config.colors.black : window.config.colors.white
+    //     // Set CSS custom properties
+    //     if (defaultColor) {
+    //       styleSheet.innerHTML = `:root, [data-bs-theme=light], [data-bs-theme=dark] {
+    //     --bs-primary: ${color};
+    //     --bs-primary-rgb: ${r}, ${g}, ${b};
+    //     --bs-primary-bg-subtle: color-mix(in sRGB, ${window.config.colors.cardColor} ${subtleRatio}, ${color});
+    //     --bs-primary-border-subtle: rgba(${r}, ${g}, ${b}, ${calculateRatio(borderSubtleRatio)});
+    //     --bs-primary-contrast: ${contrastColor}
+    //   }`
+    //     }
   },
 
   setContentLayout(contentLayout = requiredParam('contentLayout')) {
-    setTimeout(() => {
-      const contentArea = document.querySelector('.content-wrapper > div') // For content area
-      let navbarArea
-      if (document.querySelector('.layout-wrapper.layout-navbar-full')) {
-        navbarArea = document.querySelector('.layout-navbar-full .layout-navbar > div') // For horizontal navbar area
-      } else {
-        navbarArea = document.querySelector('.layout-content-navbar .layout-navbar') // For vertical navbar area
-      }
-      const footerArea = document.querySelector('.content-footer > div') // For footer area
-      const containerFluid = [].slice.call(document.querySelectorAll('.container-fluid')) // To get container-fluid
-      const containerXxl = [].slice.call(document.querySelectorAll('.container-xxl')) // To get container-xxl
-      let horizontalMenu = false // For horizontal menu
-      let horizontalMenuArea // For horizontal menu area
-      // Condition to check if layout is horizontal menu
-      if (document.querySelector('.content-wrapper > .menu-horizontal > div')) {
-        horizontalMenu = true
-        horizontalMenuArea = document.querySelector('.content-wrapper > .menu-horizontal > div')
-      }
-      //  If compact mode layout
-      if (contentLayout === 'compact') {
-        // Remove container fluid class from content area, navbar area and footer area
-        if (containerFluid.some(el => [contentArea, navbarArea, footerArea].includes(el))) {
-          this._removeClass('container-fluid', [contentArea, navbarArea, footerArea])
-          this._addClass('container-xxl', [contentArea, navbarArea, footerArea])
-        }
-
-        // For horizontal menu only
-        if (horizontalMenu) {
-          this._removeClass('container-fluid', horizontalMenuArea)
-          this._addClass('container-xxl', horizontalMenuArea)
-        }
-      } else {
-        //  If wide mode layout
-
-        // Remove container xxl class from content area, navbar area and footer area
-        if (containerXxl.some(el => [contentArea, navbarArea, footerArea].includes(el))) {
-          this._removeClass('container-xxl', [contentArea, navbarArea, footerArea])
-          this._addClass('container-fluid', [contentArea, navbarArea, footerArea])
-        }
-        // For horizontal menu only
-        if (horizontalMenu) {
-          this._removeClass('container-xxl', horizontalMenuArea)
-          this._addClass('container-fluid', horizontalMenuArea)
-        }
-      }
-    }, 100)
+    // setTimeout(() => {
+    //   const contentArea = document.querySelector('.content-wrapper > div') // For content area
+    //   let navbarArea
+    //   if (document.querySelector('.layout-wrapper.layout-navbar-full')) {
+    //     navbarArea = document.querySelector('.layout-navbar-full .layout-navbar > div') // For horizontal navbar area
+    //   } else {
+    //     navbarArea = document.querySelector('.layout-content-navbar .layout-navbar') // For vertical navbar area
+    //   }
+    //   const footerArea = document.querySelector('.content-footer > div') // For footer area
+    //   const containerFluid = [].slice.call(document.querySelectorAll('.container-fluid')) // To get container-fluid
+    //   const containerXxl = [].slice.call(document.querySelectorAll('.container-xxl')) // To get container-xxl
+    //   let horizontalMenu = false // For horizontal menu
+    //   let horizontalMenuArea // For horizontal menu area
+    //   // Condition to check if layout is horizontal menu
+    //   if (document.querySelector('.content-wrapper > .menu-horizontal > div')) {
+    //     horizontalMenu = true
+    //     horizontalMenuArea = document.querySelector('.content-wrapper > .menu-horizontal > div')
+    //   }
+    //   //  If compact mode layout
+    //   if (contentLayout === 'compact') {
+    //     // Remove container fluid class from content area, navbar area and footer area
+    //     if (containerFluid.some(el => [contentArea, navbarArea, footerArea].includes(el))) {
+    //       this._removeClass('container-fluid', [contentArea, navbarArea, footerArea])
+    //       this._addClass('container-xxl', [contentArea, navbarArea, footerArea])
+    //     }
+    //     // For horizontal menu only
+    //     if (horizontalMenu) {
+    //       this._removeClass('container-fluid', horizontalMenuArea)
+    //       this._addClass('container-xxl', horizontalMenuArea)
+    //     }
+    //   } else {
+    //     //  If wide mode layout
+    //     // Remove container xxl class from content area, navbar area and footer area
+    //     if (containerXxl.some(el => [contentArea, navbarArea, footerArea].includes(el))) {
+    //       this._removeClass('container-xxl', [contentArea, navbarArea, footerArea])
+    //       this._addClass('container-fluid', [contentArea, navbarArea, footerArea])
+    //     }
+    //     // For horizontal menu only
+    //     if (horizontalMenu) {
+    //       this._removeClass('container-xxl', horizontalMenuArea)
+    //       this._addClass('container-fluid', horizontalMenuArea)
+    //     }
+    //   }
+    // }, 100)
   },
 
   // *******************************************************************************
